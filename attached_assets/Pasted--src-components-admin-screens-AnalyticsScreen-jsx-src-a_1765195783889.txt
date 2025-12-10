@@ -1,0 +1,127 @@
+./src/components/admin/screens/AnalyticsScreen.jsx
+./src/app/admin/dashboard/page.jsx
+./src/components/admin/screens/AnalyticsScreen.jsx
+Attempted import error: 'TrendingUpIcon' is not exported from '__barrel_optimize__?names=ArrowDownTrayIcon,ChartBarIcon,CubeIcon,CurrencyDollarIcon,EyeIcon,ShoppingBagIcon,TrendingDownIcon,TrendingUpIcon,TruckIcon,UsersIcon!=!@heroicons/react/24/outline' (imported as 'TrendingUpIcon').
+Import trace for requested module:
+./src/components/admin/screens/AnalyticsScreen.jsx
+./src/app/admin/dashboard/page.jsx
+./src/components/admin/screens/AnalyticsScreen.jsx
+Attempted import error: 'TrendingUpIcon' is not exported from '__barrel_optimize__?names=ArrowDownTrayIcon,ChartBarIcon,CubeIcon,CurrencyDollarIcon,EyeIcon,ShoppingBagIcon,TrendingDownIcon,TrendingUpIcon,TruckIcon,UsersIcon!=!@heroicons/react/24/outline' (imported as 'TrendingUpIcon').
+Import trace for requested module:
+./src/components/admin/screens/AnalyticsScreen.jsx
+./src/app/admin/dashboard/page.jsx
+ ⚠ Compiled with warnings in 6.5s
+./src/components/admin/screens/AnalyticsScreen.jsx
+Attempted import error: 'TrendingUpIcon' is not exported from '__barrel_optimize__?names=ArrowDownTrayIcon,ChartBarIcon,CubeIcon,CurrencyDollarIcon,EyeIcon,ShoppingBagIcon,TrendingDownIcon,TrendingUpIcon,TruckIcon,UsersIcon!=!@heroicons/react/24/outline' (imported as 'TrendingUpIcon').
+Import trace for requested module:
+./src/components/admin/screens/AnalyticsScreen.jsx
+./src/app/admin/dashboard/page.jsx
+./src/components/admin/screens/AnalyticsScreen.jsx
+Attempted import error: 'TrendingUpIcon' is not exported from '__barrel_optimize__?names=ArrowDownTrayIcon,ChartBarIcon,CubeIcon,CurrencyDollarIcon,EyeIcon,ShoppingBagIcon,TrendingDownIcon,TrendingUpIcon,TruckIcon,UsersIcon!=!@heroicons/react/24/outline' (imported as 'TrendingUpIcon').
+Import trace for requested module:
+./src/components/admin/screens/AnalyticsScreen.jsx
+./src/app/admin/dashboard/page.jsx
+./src/components/admin/screens/AnalyticsScreen.jsx
+Attempted import error: 'TrendingUpIcon' is not exported from '__barrel_optimize__?names=ArrowDownTrayIcon,ChartBarIcon,CubeIcon,CurrencyDollarIcon,EyeIcon,ShoppingBagIcon,TrendingDownIcon,TrendingUpIcon,TruckIcon,UsersIcon!=!@heroicons/react/24/outline' (imported as 'TrendingUpIcon').
+Import trace for requested module:
+./src/components/admin/screens/AnalyticsScreen.jsx
+./src/app/admin/dashboard/page.jsx
+./src/components/admin/screens/AnalyticsScreen.jsx
+Attempted import error: 'TrendingUpIcon' is not exported from '__barrel_optimize__?names=ArrowDownTrayIcon,ChartBarIcon,CubeIcon,CurrencyDollarIcon,EyeIcon,ShoppingBagIcon,TrendingDownIcon,TrendingUpIcon,TruckIcon,UsersIcon!=!@heroicons/react/24/outline' (imported as 'TrendingUpIcon').
+Import trace for requested module:
+./src/components/admin/screens/AnalyticsScreen.jsx
+./src/app/admin/dashboard/page.jsx
+ ✓ Compiled successfully in 14.8s
+   Linting and checking validity of types ...
+./src/hooks/useAuth.js
+41:6  Warning: React Hook useEffect has a missing dependency: 'checkAuthState'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+./src/lib/api.js
+757:1  Warning: Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+./src/services/adminService.js
+825:1  Warning: Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/42) ...
+   Generating static pages (10/42) 
+   Generating static pages (20/42) 
+   Generating static pages (31/42) 
+ ✓ Generating static pages (42/42)
+   Finalizing page optimization ...
+   Collecting build traces ...
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    54.2 kB         180 kB
+├ ○ /_not-found                            998 B         103 kB
+├ ○ /about                               5.96 kB         108 kB
+├ ○ /account/dashboard                    6.1 kB         132 kB
+├ ○ /account/orders                      3.35 kB         129 kB
+├ ƒ /account/orders/[orderId]            4.99 kB         131 kB
+├ ƒ /account/orders/[orderId]/track      4.46 kB         130 kB
+├ ○ /account/settings                    7.24 kB         136 kB
+├ ○ /admin/dashboard                     23.4 kB         129 kB
+├ ○ /admin/login                         2.89 kB         108 kB
+├ ƒ /api/newsletter                        176 B         102 kB
+├ ○ /cart                                7.68 kB         144 kB
+├ ○ /category                            6.12 kB         111 kB
+├ ƒ /category/[slug]                       176 B         102 kB
+├ ○ /checkout                            4.77 kB         138 kB
+├ ○ /collections                           176 B         102 kB
+├ ○ /community                            5.9 kB         116 kB
+├ ○ /contact                               176 B         102 kB
+├ ○ /contactus                             176 B         102 kB
+├ ○ /designGuide                         1.04 kB         108 kB
+├ ○ /explore                             7.94 kB         147 kB
+├ ○ /forgot-password                     1.35 kB         110 kB
+├ ○ /gift                                  176 B         102 kB
+├ ○ /impact                                176 B         102 kB
+├ ○ /login                                2.9 kB         112 kB
+├ ○ /orders                                176 B         102 kB
+├ ○ /privacy                               176 B         102 kB
+├ ○ /PrivacyPolicy                         176 B         102 kB
+├ ƒ /product/[productId]                   176 B         102 kB
+├ ○ /products                              176 B         102 kB
+├ ƒ /products/[slug]                     6.94 kB         142 kB
+├ ○ /profile                               176 B         102 kB
+├ ○ /RefundsandCancellation                176 B         102 kB
+├ ○ /reset-password                      1.68 kB         111 kB
+├ ○ /returns                               176 B         102 kB
+├ ○ /signup                              3.79 kB         119 kB
+├ ○ /terms                               3.96 kB         106 kB
+├ ○ /TermsandConditions                    176 B         102 kB
+├ ○ /vendor                              2.92 kB         108 kB
+├ ○ /vendor/dashboard                    20.9 kB         165 kB
+├ ○ /vendor/onboarding                     173 B         139 kB
+├ ƒ /vendor/products                       176 B         102 kB
+├ ○ /verify-otp                          1.66 kB         107 kB
+└ ○ /wishlist                              176 B         102 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/1255-20045df290cc858c.js      45.7 kB
+  ├ chunks/4bd1b696-f785427dddbba9fb.js  54.2 kB
+  └ other shared chunks (total)          1.95 kB
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+==> Uploading build...
+==> Uploaded in 11.9s. Compression took 7.9s
+==> Build successful 🎉
+==> Deploying...
+==> No open ports detected, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> Running 'npm run start'
+> frontend@0.1.0 start
+> next start -H 0.0.0.0 -p 5000
+   ▲ Next.js 15.5.0
+   - Local:        http://localhost:5000
+   - Network:      http://0.0.0.0:5000
+ ✓ Starting...
+ ⚠ Invalid next.config.mjs options detected: 
+ ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ✓ Ready in 3.6s
+==> Continuing to scan for open port 10000 (from PORT environment variable)...
+==> Continuing to scan for open port 10000 (from PORT environment variable)...
+==> Continuing to scan for open port 10000 (from PORT environment variable)...
+==> Continuing to scan for open port 10000 (from PORT environment variable)...
+==> Continuing to scan for open port 10000 (from PORT environment variable)...
+==> Port scan timeout reached, failed to detect open port 10000 from PORT environment variable. Bind your service to port 10000 or update the PORT environment variable to the correct port.
+==> Timed out: Port scan timeout reached, failed to detect open port 10000 from PORT environment variable. Bind your service to port 10000 or update the PORT environment variable to the correct port.
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+Need better ways to work with lo
