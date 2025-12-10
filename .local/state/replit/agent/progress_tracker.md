@@ -42,3 +42,23 @@
 [x] 32. Updated Top Eco Picks section to show 6 items (3 columns x 2 rows) with eco score circle in top right corner
 [x] 33. Reduced size of Shop Collections and Become a Partner buttons
 [x] 34. Added 4 more products to Top Eco Picks (now 12 total products)
+
+## Session - Dec 10, 2025:
+[x] 35. Re-installed npm packages (342 packages)
+[x] 36. Restarted workflow - application running successfully
+[x] 37. Screenshot verified - all features displaying correctly
+[x] 38. Import migration fully completed
+
+## Hot Deals & Best Sellers Redesign (Dec 10, 2025):
+[x] 39. Removed excess spacing above Hot Deals section
+[x] 40. Converted Filter by Category from buttons to dropdown menu
+[x] 41. Removed "Showing X products" text from Hot Deals
+[x] 42. Removed "Explore All Deals" button from Hot Deals
+[x] 43. Converted Hot Deals products to moving carousel with smooth 3D effects
+[x] 44. Applied sustainability theme (olive green #6b8e23, soil brown #8b7355, river blue #4682b4) to Hot Deals
+[x] 45. Applied same sustainability theme to Best Sellers section
+[x] 46. Added defensive checks for carousel navigation with empty product sets
+[x] 47. Both sections now have consistent earthy/natural color palette
+[x] 48. Reduced spacing above Best Sellers header (Customer Favorites)
+[x] 49. Removed "Explore All Best Sellers" button
+[x] 50. Reduced spacing at the bottom of Best Sellers section

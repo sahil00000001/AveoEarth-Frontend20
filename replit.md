@@ -89,10 +89,10 @@ The platform includes an enhanced AI assistant chatbot with the following featur
 ### Backend
 The AI chatbot connects to a backend service via chatService.js. The service URL is configured in NEXT_PUBLIC_CHATBOT_URL (default: http://localhost:8002).
 
-## Theme: Sustainability Green & White
-The website uses a cohesive emerald/white color palette representing sustainability:
+## Theme: Sustainability Earth Tones
+The website uses a cohesive earthy color palette representing sustainability and nature:
 
-### Color Palette
+### Primary Color Palette (Navbar, Footer, General UI)
 - **Primary Green**: #047857 (Emerald-700) - Logo, headings, primary actions
 - **Secondary Green**: #059669 (Emerald-600) - Buttons, hover states
 - **Accent Green**: #10b981 (Emerald-500) - Highlights, accents
@@ -100,12 +100,19 @@ The website uses a cohesive emerald/white color palette representing sustainabil
 - **Subtle Green**: #ecfdf5 (Emerald-50) - Very light backgrounds
 - **Footer Background**: #064e3b (Emerald-900)
 
+### Sustainability Theme (Hot Deals & Best Sellers sections)
+- **Olive Green**: #6b8e23 - Primary accent color (nature/leaves)
+- **Soil Brown**: #8b7355 - Secondary accent color (earth/soil)
+- **River Blue**: #4682b4 - Tertiary accent color (water/rivers)
+- **Dark Olive**: #556b2f - Text and darker accents
+
 ### Theme Application
 - Navbar: Green top banner, green logo text, green navigation hover states
 - Footer: Deep green background (emerald-900) with light green text
 - Bottom Navigation: All categories use consistent emerald shades
+- Hot Deals & Best Sellers: Earthy sustainability theme with olive/brown/blue gradients
+- Product carousels: Smooth 3D hover effects with nature-inspired colors
 - Chatbot: Green-themed quick actions, suggestions, and UI elements
-- Buttons: Emerald-600 primary buttons with white text
 
 ## Recent Changes (Dec 2024)
 - **Updated website theme** to sustainability green and white color scheme
@@ -119,3 +126,16 @@ The website uses a cohesive emerald/white color palette representing sustainabil
 - Removed Turbopack due to symlink issues in Replit environment
 - Added allowedDevOrigins configuration for cross-origin requests
 - Set up deployment configuration for Replit
+
+## Recent Changes (Dec 10, 2025)
+- **Hot Deals Section Redesign**:
+  - Removed excess spacing above section
+  - Converted category filter from buttons to dropdown menu
+  - Removed "Showing X products" text
+  - Removed "Explore All Deals" button
+  - Products now display in a moving carousel with smooth 3D effects
+  - Applied sustainability theme (olive green, soil brown, river blue)
+- **Best Sellers Section Update**:
+  - Applied same sustainability earth-tone theme
+  - Consistent styling with Hot Deals carousel
+  - Smooth hover animations and 3D card effects
