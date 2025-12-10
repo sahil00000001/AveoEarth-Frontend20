@@ -3,10 +3,10 @@
 export default function Footer() {
   return (
     <footer className="bg-olive-900 text-white w-full relative overflow-hidden border-t border-olive-700">
-      <div className="max-w-[1200px] mx-auto px-6 pt-[45px] pb-0 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-6 pt-6 pb-0 relative z-10">
         
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-12 mb-[45px]">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-6 lg:gap-10 mb-6">
           
           {/* Company Info */}
           <div className="lg:col-span-2 flex flex-col gap-3">
@@ -119,7 +119,7 @@ export default function Footer() {
         </div>
         
         {/* Subscribe Row */}
-        <div className="py-6 border-t border-olive-700 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="py-4 border-t border-olive-700 flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="text-sm text-olive-100">Stay updated with product drops and eco-tips</div>
           <form
             className="flex items-center gap-2 w-full md:w-auto"
@@ -148,7 +148,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom - Copyright and Payment Methods */}
-        <div className="flex flex-col md:flex-row items-center justify-between py-[18px] border-t border-olive-700 gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between py-3 border-t border-olive-700 gap-3">
           
           {/* Copyright */}
           <p className="font-poppins text-olive-200 text-[10.5px] leading-[1.5]">

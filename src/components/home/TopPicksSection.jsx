@@ -214,21 +214,15 @@ function EcoScoreBadge({ score, delay = 0, compact = false }) {
 
 function ProductTile3D({ product, index, isActive, compact = false }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState({});
+  const [imageLoaded, setImageLoaded] = useState(false);
   const cardRef = useRef(null);
-  const imageIntervalRef = useRef(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
-  const handleImageLoad = (imgIndex) => {
-    setImagesLoaded(prev => ({ ...prev, [imgIndex]: true }));
-  };
 
   const rotateX = useTransform(mouseY, [-0.5, 0.5], [12, -12]);
   const rotateY = useTransform(mouseX, [-0.5, 0.5], [-12, 12]);
 
-  const images = product.images || [product.image];
+  const productImage = product.images?.[0] || product.image;
 
   const handleMouseMove = (e) => {
     if (!cardRef.current) return;
@@ -241,33 +235,13 @@ function ProductTile3D({ product, index, isActive, compact = false }) {
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    
-    if (images.length > 1) {
-      imageIntervalRef.current = setInterval(() => {
-        setCurrentImageIndex((prev) => (prev + 1) % images.length);
-      }, 800);
-    }
   };
 
   const handleMouseLeave = () => {
     mouseX.set(0);
     mouseY.set(0);
     setIsHovered(false);
-    setCurrentImageIndex(0);
-    
-    if (imageIntervalRef.current) {
-      clearInterval(imageIntervalRef.current);
-      imageIntervalRef.current = null;
-    }
   };
-
-  useEffect(() => {
-    return () => {
-      if (imageIntervalRef.current) {
-        clearInterval(imageIntervalRef.current);
-      }
-    };
-  }, []);
 
   const imageHeight = compact ? "h-24" : "h-48";
   const padding = compact ? "p-2" : "p-4";
@@ -311,31 +285,26 @@ function ProductTile3D({ product, index, isActive, compact = false }) {
         />
         
         <div className={`relative ${imageHeight} bg-gradient-to-br from-gray-50 to-gray-100/50 overflow-hidden`}>
-          {!imagesLoaded[currentImageIndex] && (
+          {!imageLoaded && (
             <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50 animate-pulse">
               <div className="w-16 h-16 rounded-full bg-gray-200/70" />
             </div>
           )}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentImageIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: imagesLoaded[currentImageIndex] ? 1 : 0, scale: isHovered ? 1.08 : 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="absolute inset-0"
-            >
-              <Image
-                src={images[currentImageIndex]}
-                alt={product.name}
-                fill
-                priority
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-contain p-2"
-                onLoad={() => handleImageLoad(currentImageIndex)}
-              />
-            </motion.div>
-          </AnimatePresence>
+          <motion.div
+            animate={{ opacity: imageLoaded ? 1 : 0, scale: isHovered ? 1.08 : 1 }}
+            transition={{ duration: 0.3 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={productImage}
+              alt={product.name}
+              fill
+              priority
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              className="object-contain p-2"
+              onLoad={() => setImageLoaded(true)}
+            />
+          </motion.div>
           
           {compact && (
             <div className="absolute top-1.5 right-1.5 z-20">
@@ -344,19 +313,6 @@ function ProductTile3D({ product, index, isActive, compact = false }) {
                   <span className="text-white font-bold text-[9px] leading-none">{product.ecoScore}</span>
                 </div>
               </div>
-            </div>
-          )}
-          
-          {images.length > 1 && isHovered && (
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-20">
-              {images.map((_, idx) => (
-                <div
-                  key={idx}
-                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                    idx === currentImageIndex ? "bg-olive-500 w-3" : "bg-white/60"
-                  }`}
-                />
-              ))}
             </div>
           )}
           
