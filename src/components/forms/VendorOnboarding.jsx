@@ -164,21 +164,21 @@ export default function VendorOnboarding({ onComplete }) {
               <div key={step.id} className="flex items-center">
                 <div className={`flex items-center justify-center w-10 h-10 rounded-full text-sm font-medium ${
                   currentStep >= step.id 
-                    ? "bg-green-600 text-white" 
+                    ? "bg-olive-600 text-white" 
                     : "bg-gray-200 text-gray-600"
                 }`}>
                   {currentStep > step.id ? "✓" : step.icon}
                 </div>
                 <div className="ml-3 hidden md:block">
                   <div className={`text-sm font-medium ${
-                    currentStep >= step.id ? "text-green-600" : "text-gray-500"
+                    currentStep >= step.id ? "text-olive-600" : "text-gray-500"
                   }`}>
                     {step.title}
                   </div>
                 </div>
                 {index < steps.length - 1 && (
                   <div className={`w-8 h-0.5 mx-4 ${
-                    currentStep > step.id ? "bg-green-600" : "bg-gray-200"
+                    currentStep > step.id ? "bg-olive-600" : "bg-gray-200"
                   }`} />
                 )}
               </div>
@@ -240,7 +240,7 @@ function BusinessInformationStep({ formData, onChange, errors, businessTypes }) 
             type="text"
             value={formData.businessName}
             onChange={(e) => onChange('businessName', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.businessName ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Enter your business name"
@@ -255,7 +255,7 @@ function BusinessInformationStep({ formData, onChange, errors, businessTypes }) 
           <select
             value={formData.businessType}
             onChange={(e) => onChange('businessType', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.businessType ? 'border-red-500' : 'border-gray-300'
             }`}
           >
@@ -275,7 +275,7 @@ function BusinessInformationStep({ formData, onChange, errors, businessTypes }) 
             type="text"
             value={formData.registrationNumber}
             onChange={(e) => onChange('registrationNumber', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.registrationNumber ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Enter registration number"
@@ -291,7 +291,7 @@ function BusinessInformationStep({ formData, onChange, errors, businessTypes }) 
             type="text"
             value={formData.taxId}
             onChange={(e) => onChange('taxId', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.taxId ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Enter tax ID"
@@ -307,7 +307,7 @@ function BusinessInformationStep({ formData, onChange, errors, businessTypes }) 
             type="url"
             value={formData.website}
             onChange={(e) => onChange('website', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
             placeholder="https://yourwebsite.com"
           />
         </div>
@@ -320,7 +320,7 @@ function BusinessInformationStep({ formData, onChange, errors, businessTypes }) 
             value={formData.description}
             onChange={(e) => onChange('description', e.target.value)}
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
             placeholder="Describe your business and the products you sell..."
           />
         </div>
@@ -342,7 +342,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="text"
             value={formData.contactPerson}
             onChange={(e) => onChange('contactPerson', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.contactPerson ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Full name"
@@ -358,7 +358,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="email"
             value={formData.contactEmail}
             onChange={(e) => onChange('contactEmail', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.contactEmail ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="contact@business.com"
@@ -374,7 +374,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="tel"
             value={formData.contactPhone}
             onChange={(e) => onChange('contactPhone', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.contactPhone ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="+1 (555) 123-4567"
@@ -390,7 +390,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="text"
             value={formData.businessAddress}
             onChange={(e) => onChange('businessAddress', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.businessAddress ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Street address"
@@ -406,7 +406,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="text"
             value={formData.city}
             onChange={(e) => onChange('city', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
             placeholder="City"
           />
         </div>
@@ -419,7 +419,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="text"
             value={formData.state}
             onChange={(e) => onChange('state', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
             placeholder="State or Province"
           />
         </div>
@@ -432,7 +432,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="text"
             value={formData.zipCode}
             onChange={(e) => onChange('zipCode', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
             placeholder="ZIP or Postal Code"
           />
         </div>
@@ -445,7 +445,7 @@ function ContactAddressStep({ formData, onChange, errors }) {
             type="text"
             value={formData.country}
             onChange={(e) => onChange('country', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
             placeholder="Country"
           />
         </div>
@@ -477,7 +477,7 @@ function BankDetailsStep({ formData, onChange, errors }) {
             type="text"
             value={formData.bankName}
             onChange={(e) => onChange('bankName', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.bankName ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Your bank name"
@@ -493,7 +493,7 @@ function BankDetailsStep({ formData, onChange, errors }) {
             type="text"
             value={formData.accountHolderName}
             onChange={(e) => onChange('accountHolderName', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.accountHolderName ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Name on account"
@@ -509,7 +509,7 @@ function BankDetailsStep({ formData, onChange, errors }) {
             type="text"
             value={formData.accountNumber}
             onChange={(e) => onChange('accountNumber', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent ${
               errors.accountNumber ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Account number"
@@ -525,7 +525,7 @@ function BankDetailsStep({ formData, onChange, errors }) {
             type="text"
             value={formData.routingNumber}
             onChange={(e) => onChange('routingNumber', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
             placeholder="Routing number (if applicable)"
           />
         </div>
@@ -546,7 +546,7 @@ function DocumentsMediaStep({ formData, onFileUpload, onRemoveFile, errors }) {
           Company Logo *
         </label>
         <div className="flex items-start gap-4">
-          <div className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-green-500 transition-colors ${
+          <div className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-olive-500 transition-colors ${
             errors.logo ? 'border-red-500' : 'border-gray-300'
           }`}>
             <input
@@ -594,7 +594,7 @@ function DocumentsMediaStep({ formData, onFileUpload, onRemoveFile, errors }) {
           Banner Image (Optional)
         </label>
         <div className="flex items-start gap-4">
-          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-green-500 transition-colors w-full">
+          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-olive-500 transition-colors w-full">
             <input
               type="file"
               accept="image/*"
@@ -642,7 +642,7 @@ function DocumentsMediaStep({ formData, onFileUpload, onRemoveFile, errors }) {
           Upload business registration, tax documents, or other verification documents.
         </p>
         
-        <div className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-green-500 transition-colors ${
+        <div className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-olive-500 transition-colors ${
           errors.kycDocuments ? 'border-red-500' : 'border-gray-300'
         }`}>
           <input
@@ -699,12 +699,12 @@ function DocumentsMediaStep({ formData, onFileUpload, onRemoveFile, errors }) {
 function ReviewSubmitStep({ formData }) {
   return (
     <div className="space-y-6">
-      <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+      <div className="bg-olive-50 border border-olive-200 rounded-lg p-6">
         <div className="flex items-center gap-2 text-green-800 mb-2">
           <span className="text-lg">✅</span>
           <span className="font-medium">Review Your Information</span>
         </div>
-        <p className="text-sm text-green-700">
+        <p className="text-sm text-olive-700">
           Please review all information before submitting. You can go back to make changes if needed.
         </p>
       </div>

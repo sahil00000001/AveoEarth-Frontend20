@@ -147,9 +147,9 @@ export default function ProductsScreen() {
   const getStatusBadge = (status) => {
     const statusConfig = {
       pending: { color: 'bg-yellow-100 text-yellow-800', text: 'Pending Review' },
-      approved: { color: 'bg-green-100 text-green-800', text: 'Approved' },
+      approved: { color: 'bg-olive-100 text-green-800', text: 'Approved' },
       rejected: { color: 'bg-red-100 text-red-800', text: 'Rejected' },
-      active: { color: 'bg-green-100 text-green-800', text: 'Active' },
+      active: { color: 'bg-olive-100 text-green-800', text: 'Active' },
       inactive: { color: 'bg-gray-100 text-gray-800', text: 'Inactive' },
     };
     
@@ -370,7 +370,7 @@ export default function ProductsScreen() {
                           <>
                             <button
                               onClick={() => openReviewModal(product, 'approve')}
-                              className="text-green-600 hover:text-green-900 p-1 rounded"
+                              className="text-olive-600 hover:text-green-900 p-1 rounded"
                               title="Approve Product"
                             >
                               <CheckIcon className="h-4 w-4" />
@@ -391,7 +391,7 @@ export default function ProductsScreen() {
                             className={`p-1 rounded ${
                               product.status === 'active' 
                                 ? 'text-orange-600 hover:text-orange-900' 
-                                : 'text-green-600 hover:text-green-900'
+                                : 'text-olive-600 hover:text-green-900'
                             }`}
                             title={product.status === 'active' ? 'Disable Product' : 'Enable Product'}
                           >
@@ -545,7 +545,7 @@ export default function ProductsScreen() {
                   disabled={isSubmitting || (reviewAction === 'reject' && !reviewComment.trim())}
                   className={`px-4 py-2 rounded-lg text-white transition-colors ${
                     reviewAction === 'approve' 
-                      ? 'bg-green-600 hover:bg-green-700 disabled:bg-green-400' 
+                      ? 'bg-olive-600 hover:bg-olive-700 disabled:bg-olive-400' 
                       : 'bg-red-600 hover:bg-red-700 disabled:bg-red-400'
                   }`}
                 >

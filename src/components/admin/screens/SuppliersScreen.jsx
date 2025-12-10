@@ -185,7 +185,7 @@ export default function SuppliersScreen() {
     const isVerified = supplier.is_verified || supplier.verification_status === 'verified';
     
     if (isVerified) {
-      return { color: 'bg-green-100 text-green-800', text: 'Verified' };
+      return { color: 'bg-olive-100 text-green-800', text: 'Verified' };
     } else if (hasDocuments) {
       return { color: 'bg-yellow-100 text-yellow-800', text: 'Pending Review' };
     } else {
@@ -373,7 +373,7 @@ export default function SuppliersScreen() {
                           {supplier.verification_status !== 'verified' && (
                             <button
                               onClick={() => openReviewModal(supplier, 'approve')}
-                              className="text-green-600 hover:text-green-900 p-1 rounded"
+                              className="text-olive-600 hover:text-green-900 p-1 rounded"
                               title="Approve Supplier"
                             >
                               <CheckIcon className="h-4 w-4" />
@@ -497,7 +497,7 @@ export default function SuppliersScreen() {
                         <h5 className="font-medium text-gray-900">{document.document_name || document.document_type}</h5>
                         <span className={`px-2 py-1 text-xs rounded-full ${
                           document.document_status === 'verified' 
-                            ? 'bg-green-100 text-green-800'
+                            ? 'bg-olive-100 text-green-800'
                             : document.document_status === 'rejected'
                             ? 'bg-red-100 text-red-800'
                             : 'bg-yellow-100 text-yellow-800'
@@ -543,7 +543,7 @@ export default function SuppliersScreen() {
                   <button
                     onClick={() => handleApproveSupplier(selectedSupplier.supplier_id)}
                     disabled={isLoading}
-                    className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                    className="px-4 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
                     {isLoading ? 'Processing...' : 'Verify Supplier'}
                   </button>

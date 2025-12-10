@@ -115,8 +115,8 @@ const DraggableChatModal = ({ isOpen, onClose, userType = "buyer", initialPositi
   const headerRef = useRef(null);
 
   const theme = userType === "supplier" 
-    ? { primary: "#047857", secondary: "#10b981", light: "#ecfdf5", gradient: "from-emerald-700 to-emerald-600" }
-    : { primary: "#059669", secondary: "#10b981", light: "#ecfdf5", gradient: "from-emerald-600 to-emerald-500" };
+    ? { primary: "#047857", secondary: "#10b981", light: "#ecfdf5", gradient: "from-olive-700 to-olive-600" }
+    : { primary: "#059669", secondary: "#10b981", light: "#ecfdf5", gradient: "from-olive-600 to-olive-500" };
 
   const handleMouseDown = (e) => {
     if (headerRef.current && headerRef.current.contains(e.target)) {
@@ -342,7 +342,7 @@ const DraggableChatModal = ({ isOpen, onClose, userType = "buyer", initialPositi
             <div className="w-10 h-10 rounded-full bg-white/20 items-center justify-center text-white hidden">
               <BotIcon />
             </div>
-            <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white"></div>
+            <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-olive-400 rounded-full border-2 border-white"></div>
           </div>
           <div className="text-white">
             <h3 className="text-sm font-semibold">

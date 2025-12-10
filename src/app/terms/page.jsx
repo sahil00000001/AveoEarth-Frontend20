@@ -137,7 +137,7 @@ export default function TermsPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="border border-gray-300 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-800 mb-2 text-green-600">FREE TIER:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2 text-olive-600">FREE TIER:</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
                     <li>Basic platform access</li>
                     <li>Standard payment cycle: T+21 days post-delivery</li>

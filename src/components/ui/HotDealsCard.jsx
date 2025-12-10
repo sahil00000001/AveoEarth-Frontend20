@@ -100,7 +100,7 @@ export default function HotDealsCard({
               )}
             </div>
             {originalPrice && (
-              <div className="text-xs text-green-600 font-medium">Save ₹{calculateSavings()}</div>
+              <div className="text-xs text-olive-600 font-medium">Save ₹{calculateSavings()}</div>
             )}
           </div>
 
@@ -124,8 +124,8 @@ export default function HotDealsCard({
             </svg>
             <span>Free shipping</span>
           </div>
-          <div className="flex items-center gap-1 text-green-600">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <div className="flex items-center gap-1 text-olive-600">
+            <div className="w-2 h-2 bg-olive-500 rounded-full animate-pulse"></div>
             <span>In stock</span>
           </div>
         </div>

@@ -143,7 +143,7 @@ const FileUpload = ({
       <div
         className={`relative border-2 border-dashed rounded-lg p-6 text-center transition-colors
           ${isUploading ? 'cursor-not-allowed opacity-75' : 'cursor-pointer'}
-          ${dragActive && !isUploading ? 'border-[#12b74f] bg-green-50' : 'border-gray-300 hover:border-gray-400'}
+          ${dragActive && !isUploading ? 'border-[#12b74f] bg-olive-50' : 'border-gray-300 hover:border-gray-400'}
           ${errors.length > 0 ? 'border-red-300 bg-red-50' : ''}
         `}
         onDragEnter={!isUploading ? handleDrag : undefined}

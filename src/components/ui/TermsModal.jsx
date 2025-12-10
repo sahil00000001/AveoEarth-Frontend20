@@ -124,7 +124,7 @@ export default function TermsModal({ isOpen, onClose }) {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                 <div className="border border-gray-300 rounded p-3">
-                  <h5 className="font-semibold text-green-600 text-sm mb-1">FREE TIER:</h5>
+                  <h5 className="font-semibold text-olive-600 text-sm mb-1">FREE TIER:</h5>
                   <ul className="list-disc list-inside space-y-1 text-xs text-gray-600">
                     <li>Basic platform access</li>
                     <li>Payment cycle: T+21 days</li>
@@ -204,7 +204,7 @@ export default function TermsModal({ isOpen, onClose }) {
                 </span>
               )}
               {isScrolledToBottom && (
-                <span className="text-green-600 font-medium">
+                <span className="text-olive-600 font-medium">
                   ✅ You have read the complete terms
                 </span>
               )}

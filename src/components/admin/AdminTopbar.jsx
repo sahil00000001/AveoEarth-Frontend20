@@ -54,7 +54,7 @@ export default function AdminTopbar({ user }) {
           <input
             type="text"
             placeholder="Search products, users, orders..."
-            className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
           />
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function AdminTopbar({ user }) {
             className="relative p-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
             <BellIcon className="h-6 w-6" />
-            <div className="absolute -top-1 -right-1 h-5 w-5 bg-emerald-500 rounded-full flex items-center justify-center">
+            <div className="absolute -top-1 -right-1 h-5 w-5 bg-olive-500 rounded-full flex items-center justify-center">
               <span className="text-xs font-bold text-white">3</span>
             </div>
           </button>
@@ -94,7 +94,7 @@ export default function AdminTopbar({ user }) {
                 </div>
               </div>
               <div className="px-4 py-2 border-t border-gray-100">
-                <button className="text-sm text-emerald-600 hover:text-emerald-700 font-medium">
+                <button className="text-sm text-olive-600 hover:text-olive-700 font-medium">
                   View all notifications
                 </button>
               </div>
@@ -108,8 +108,8 @@ export default function AdminTopbar({ user }) {
             onClick={() => setShowProfileMenu(!showProfileMenu)}
             className="flex items-center gap-3 hover:bg-gray-50 rounded-lg px-2 py-1 transition-colors"
           >
-            <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-              <span className="text-sm font-semibold text-emerald-700">
+            <div className="w-10 h-10 bg-olive-100 rounded-full flex items-center justify-center">
+              <span className="text-sm font-semibold text-olive-700">
                 {getUserInitials(user)}
               </span>
             </div>

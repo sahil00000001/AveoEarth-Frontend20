@@ -26,7 +26,7 @@ export default function StatCard({
           <p className="text-xl font-bold text-gray-900 mt-1">{value}</p>
           {change && (
             <p className="text-sm mt-2">
-              <span className={`${changeType === 'up' ? 'text-green-600' : 'text-red-600'}`}>
+              <span className={`${changeType === 'up' ? 'text-olive-600' : 'text-red-600'}`}>
                 {changeType === 'up' ? '+' : '-'}{change}
               </span>
               {description && (

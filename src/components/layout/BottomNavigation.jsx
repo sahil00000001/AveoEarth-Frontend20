@@ -18,9 +18,9 @@ export default function BottomNavigation() {
           <path d="M9 22V12h6v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      gradient: "from-emerald-400 via-teal-500 to-cyan-500",
+      gradient: "from-olive-400 via-teal-500 to-cyan-500",
       glowColor: "rgba(16, 185, 129, 0.5)",
-      bgGlow: "shadow-emerald-500/40"
+      bgGlow: "shadow-olive-500/40"
     },
     {
       href: "/explore?category=fashion",
@@ -87,9 +87,9 @@ export default function BottomNavigation() {
           <path d="M2 10h2v4H2zM20 10h2v4h-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      gradient: "from-green-400 via-emerald-500 to-teal-500",
+      gradient: "from-olive-400 via-olive-500 to-teal-500",
       glowColor: "rgba(34, 197, 94, 0.5)",
-      bgGlow: "shadow-green-500/40"
+      bgGlow: "shadow-olive-500/40"
     }
   ];
 
@@ -167,7 +167,7 @@ export default function BottomNavigation() {
         <div className="flex justify-center">
           <div className="pointer-events-auto perspective-1000">
             <div className="relative bg-white/80 backdrop-blur-2xl border border-white/40 rounded-2xl p-2 shadow-xl shadow-gray-900/15">
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-transparent to-teal-500/10 opacity-60" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-olive-500/10 via-transparent to-teal-500/10 opacity-60" />
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <div className="absolute inset-0 shimmer-bg opacity-30" />
               </div>

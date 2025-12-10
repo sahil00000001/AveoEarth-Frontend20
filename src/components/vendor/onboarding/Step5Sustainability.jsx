@@ -270,7 +270,7 @@ export default function Step5Sustainability({ formData, handleChange, errors = {
       )}
 
       {/* Information about sustainability benefits */}
-      <div className="bg-gradient-to-r from-[var(--color-eco-subtle)] to-green-50 border border-[var(--color-eco-accent)] rounded-lg p-6 mx-4">
+      <div className="bg-gradient-to-r from-[var(--color-eco-subtle)] to-olive-50 border border-[var(--color-eco-accent)] rounded-lg p-6 mx-4">
         <div className="flex items-start">
           <div className="flex-shrink-0">
             <div className="w-10 h-10 bg-[var(--color-eco-primary)] rounded-full flex items-center justify-center">

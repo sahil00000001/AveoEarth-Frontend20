@@ -674,12 +674,12 @@ export default function Step3ProductInfo({ formData, handleChange, errors = {}, 
           {verificationState.result && (
             <div className={`mt-3 p-3 rounded-lg border ${
               verificationState.result.probability >= 0.7 
-                ? 'bg-green-50 border-green-200' 
+                ? 'bg-olive-50 border-olive-200' 
                 : 'bg-yellow-50 border-yellow-200'
             }`}>
               <div className="flex items-center gap-2 mb-2">
                 <span className={`text-lg ${
-                  verificationState.result.probability >= 0.7 ? 'text-green-600' : 'text-yellow-600'
+                  verificationState.result.probability >= 0.7 ? 'text-olive-600' : 'text-yellow-600'
                 }`}>
                   {verificationState.result.probability >= 0.7 ? '✅' : '⚠️'}
                 </span>
@@ -690,7 +690,7 @@ export default function Step3ProductInfo({ formData, handleChange, errors = {}, 
                 </span>
               </div>
               <p className={`text-sm ${
-                verificationState.result.probability >= 0.7 ? 'text-green-700' : 'text-yellow-700'
+                verificationState.result.probability >= 0.7 ? 'text-olive-700' : 'text-yellow-700'
               }`}>
                 {verificationState.result.probability >= 0.7 
                   ? 'Great! Your image and title match well. This product will be auto-approved.' 
@@ -699,7 +699,7 @@ export default function Step3ProductInfo({ formData, handleChange, errors = {}, 
               </p>
               {verificationState.result.suggestion && (
                 <p className={`text-sm mt-1 ${
-                  verificationState.result.score >= 0.7 ? 'text-green-600' : 'text-yellow-600'
+                  verificationState.result.score >= 0.7 ? 'text-olive-600' : 'text-yellow-600'
                 }`}>
                   💡 {verificationState.result.suggestion}
                 </p>

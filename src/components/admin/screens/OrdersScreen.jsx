@@ -90,7 +90,7 @@ export default function OrdersScreen() {
       confirmed: { color: 'bg-blue-100 text-blue-800', text: 'Confirmed' },
       processing: { color: 'bg-purple-100 text-purple-800', text: 'Processing' },
       shipped: { color: 'bg-indigo-100 text-indigo-800', text: 'Shipped' },
-      delivered: { color: 'bg-green-100 text-green-800', text: 'Delivered' },
+      delivered: { color: 'bg-olive-100 text-green-800', text: 'Delivered' },
       cancelled: { color: 'bg-red-100 text-red-800', text: 'Cancelled' },
       refunded: { color: 'bg-gray-100 text-gray-800', text: 'Refunded' },
     };
@@ -271,7 +271,7 @@ export default function OrdersScreen() {
                         {order.status === 'pending' && (
                           <button
                             onClick={() => updateOrderStatus(order.id, 'confirmed')}
-                            className="text-green-600 hover:text-green-900 p-1 rounded"
+                            className="text-olive-600 hover:text-green-900 p-1 rounded"
                             title="Confirm Order"
                           >
                             <CheckIcon className="h-4 w-4" />
@@ -482,7 +482,7 @@ export default function OrdersScreen() {
                 {selectedOrder.status === 'shipped' && (
                   <button
                     onClick={() => updateOrderStatus(selectedOrder.id, 'delivered')}
-                    className="px-3 py-1 bg-green-600 text-white rounded text-sm hover:bg-green-700 transition-colors"
+                    className="px-3 py-1 bg-olive-600 text-white rounded text-sm hover:bg-olive-700 transition-colors"
                   >
                     Mark as Delivered
                   </button>

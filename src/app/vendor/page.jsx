@@ -48,7 +48,7 @@ export default function VendorLogin() {
       <nav className="bg-white border-b border-gray-200 px-6 py-4">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-olive-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">A</span>
             </div>
             <span className="font-bold text-lg text-gray-900">AveoEarth</span>
@@ -119,7 +119,7 @@ export default function VendorLogin() {
                       type="text"
                       value={formData.businessName}
                       onChange={(e) => handleChange("businessName", e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                       placeholder="Enter your business name"
                       required
                     />
@@ -133,7 +133,7 @@ export default function VendorLogin() {
                       type="text"
                       value={formData.contactPerson}
                       onChange={(e) => handleChange("contactPerson", e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                       placeholder="Your full name"
                       required
                     />
@@ -147,7 +147,7 @@ export default function VendorLogin() {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleChange("phone", e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                       placeholder="+1 (555) 123-4567"
                       required
                     />
@@ -163,7 +163,7 @@ export default function VendorLogin() {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleChange("email", e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                   placeholder="vendor@business.com"
                   required
                 />
@@ -177,7 +177,7 @@ export default function VendorLogin() {
                   type="password"
                   value={formData.password}
                   onChange={(e) => handleChange("password", e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                   placeholder="Create a secure password"
                   required
                 />
@@ -192,7 +192,7 @@ export default function VendorLogin() {
                     type="password"
                     value={formData.confirmPassword}
                     onChange={(e) => handleChange("confirmPassword", e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                     placeholder="Confirm your password"
                     required
                   />
@@ -206,16 +206,16 @@ export default function VendorLogin() {
                     id="terms"
                     checked={formData.agreeToTerms}
                     onChange={(e) => handleChange("agreeToTerms", e.target.checked)}
-                    className="mt-1 h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                    className="mt-1 h-4 w-4 text-olive-600 border-gray-300 rounded focus:ring-olive-500"
                     required
                   />
                   <label htmlFor="terms" className="text-sm text-gray-700">
                     I agree to the{" "}
-                    <Link href="/vendor/terms" className="text-green-600 hover:text-green-700">
+                    <Link href="/vendor/terms" className="text-olive-600 hover:text-olive-700">
                       Terms of Service
                     </Link>{" "}
                     and{" "}
-                    <Link href="/vendor/privacy" className="text-green-600 hover:text-green-700">
+                    <Link href="/vendor/privacy" className="text-olive-600 hover:text-olive-700">
                       Privacy Policy
                     </Link>
                   </label>
@@ -239,7 +239,7 @@ export default function VendorLogin() {
 
             {mode === "login" && (
               <div className="mt-4 text-center">
-                <Link href="/vendor/forgot-password" className="text-sm text-green-600 hover:text-green-700">
+                <Link href="/vendor/forgot-password" className="text-sm text-olive-600 hover:text-olive-700">
                   Forgot your password?
                 </Link>
               </div>
@@ -248,7 +248,7 @@ export default function VendorLogin() {
             <div className="mt-6 pt-6 border-t border-gray-200 text-center">
               <p className="text-sm text-gray-600">
                 Need help?{" "}
-                <Link href="/vendor/support" className="text-green-600 hover:text-green-700">
+                <Link href="/vendor/support" className="text-olive-600 hover:text-olive-700">
                   Contact Vendor Support
                 </Link>
               </p>
@@ -263,8 +263,8 @@ export default function VendorLogin() {
               <h3 className="font-bold text-lg text-gray-800 mb-4">Why Sell on AveoEarth?</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600">🌱</span>
+                  <div className="w-8 h-8 bg-olive-100 rounded-full flex items-center justify-center">
+                    <span className="text-olive-600">🌱</span>
                   </div>
                   <div>
                     <div className="font-medium text-gray-800">Sustainable Focus</div>

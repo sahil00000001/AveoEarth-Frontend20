@@ -17,10 +17,10 @@ function CategoryNavigation() {
     {
       name: 'Home & Living',
       href: '/explore?category=home-living',
-      gradient: 'from-emerald-500 to-teal-600',
-      bgGradient: 'from-emerald-50 to-teal-50',
-      hoverBg: 'hover:bg-emerald-50',
-      iconBg: 'bg-gradient-to-br from-emerald-500 to-teal-600',
+      gradient: 'from-olive-500 to-teal-600',
+      bgGradient: 'from-olive-50 to-teal-50',
+      hoverBg: 'hover:bg-olive-50',
+      iconBg: 'bg-gradient-to-br from-olive-500 to-teal-600',
       icon: (
         <svg width="20" height="20" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8.5 0.5L17 5.5V16.5H11V10.5H6V16.5H0V5.5L8.5 0.5Z" fill="white"/>
@@ -86,10 +86,10 @@ function CategoryNavigation() {
     {
       name: 'Fitness',
       href: '/explore?category=fitness',
-      gradient: 'from-green-500 to-emerald-600',
-      bgGradient: 'from-green-50 to-emerald-50',
-      hoverBg: 'hover:bg-green-50',
-      iconBg: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-olive-500 to-olive-600',
+      bgGradient: 'from-olive-50 to-olive-50',
+      hoverBg: 'hover:bg-olive-50',
+      iconBg: 'bg-gradient-to-br from-olive-500 to-olive-600',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20.57 14.86L22 13.43L20.57 12L17 15.57L8.43 7L12 3.43L10.57 2L9.14 3.43L7.71 2L5.57 4.14L4.14 2.71L2.71 4.14L4.14 5.57L2 7.71L3.43 9.14L2 10.57L3.43 12L7 8.43L15.57 17L12 20.57L13.43 22L14.86 20.57L16.29 22L18.43 19.86L19.86 21.29L21.29 19.86L19.86 18.43L22 16.29L20.57 14.86Z" fill="white"/>
@@ -114,7 +114,7 @@ function CategoryNavigation() {
                   {category.icon}
                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-white rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <svg width="8" height="8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={`text-emerald-600`}/>
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={`text-olive-600`}/>
                     </svg>
                   </div>
                 </div>
@@ -460,7 +460,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-white relative overflow-hidden">
 
       {/* Hero Section - Similar to HeroSection.tsx */}
-      <section className="relative min-h-[85vh] bg-gradient-to-br from-emerald-50 to-emerald-100 overflow-hidden flex items-center justify-center">
+      <section className="relative min-h-[85vh] bg-gradient-to-br from-olive-50 to-olive-100 overflow-hidden flex items-center justify-center">
         {/* Parallax Background */}
         <div className="absolute inset-0 parallax-layer">
           <Image
@@ -480,7 +480,7 @@ export default function HomePage() {
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 leading-tight">
                   Sustainability
-                  <span className="text-emerald-700 block">Simplified</span>
+                  <span className="text-olive-600 block" style={{ color: '#6b8e23' }}>Simplified</span>
                 </h1>
                 
                 <div className="h-12 flex items-center justify-center lg:justify-start">
@@ -529,7 +529,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">Explore Our <span className="text-emerald-700">Categories</span></h2>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">Explore Our <span className="text-olive-700">Categories</span></h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Curated collections for a sustainable lifestyle. Hover to see featured products.</p>
           </div>
           <style>{`@keyframes bubble-emerge{from{opacity:0;transform:scale(0.8) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}.bubble-emerge{animation:bubble-emerge 300ms cubic-bezier(0.175,0.885,0.32,1.275) forwards;opacity:0}`}</style>
@@ -545,8 +545,8 @@ export default function HomePage() {
                     <path d="M8.5 0.5L17 5.5V16.5H11V10.5H6V16.5H0V5.5L8.5 0.5Z" fill="currentColor"/>
                   </svg>
                 ), 
-                color: 'text-emerald-700', 
-                badgeBg: 'bg-emerald-100',
+                color: 'text-olive-700', 
+                badgeBg: 'bg-olive-100',
                 products: [
                   {name: 'Bamboo Kitchen Set', price: '₹1,299', eco: 'Biodegradable'},
                   {name: 'Recycled Glass Jars', price: '₹599', eco: 'Recycled'},
@@ -631,8 +631,8 @@ export default function HomePage() {
                 desc: 'Sustainable fitness & wellness gear', 
                 bgImage: '/fitness.jpg',
                 icon: '💪', 
-                color: 'text-green-700', 
-                badgeBg: 'bg-green-100',
+                color: 'text-olive-700', 
+                badgeBg: 'bg-olive-100',
                 products: [
                   {name: 'Cork Yoga Mat', price: '₹2,199', eco: 'Natural Cork'},
                   {name: 'Hemp Yoga Strap', price: '₹399', eco: 'Hemp'},
@@ -670,7 +670,7 @@ export default function HomePage() {
                       <div className="space-y-1">
                         <h4 className="font-semibold text-sm text-gray-800 truncate">{p.name}</h4>
                         <div className="flex items-center justify-between">
-                          <span className="font-semibold text-base text-emerald-700">{p.price}</span>
+                          <span className="font-semibold text-base text-olive-700">{p.price}</span>
                           <span className={`text-xs px-1.5 py-0.5 rounded-full ${cat.badgeBg} ${cat.color} border border-current`}>{p.eco}</span>
           </div>
         </div>
@@ -681,7 +681,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/explore" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow transition-colors">View All Collections</Link>
+            <Link href="/explore" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-olive-600 hover:bg-olive-700 text-white font-semibold shadow transition-colors">View All Collections</Link>
           </div>
         </div>
       </section>

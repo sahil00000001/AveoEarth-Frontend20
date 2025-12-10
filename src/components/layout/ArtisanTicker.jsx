@@ -14,28 +14,35 @@ const artisanScenes = [
   { id: "tailor", name: "Tailor", image: "/artisan-sketches/tailor_stitching_fabric_sketch.png" }
 ];
 
-const ArtisanCard = ({ scene }) => (
-  <div 
-    className="flex flex-col items-center justify-center mx-3"
-    title={scene.name}
-    aria-label={scene.name}
-  >
-    <div className="w-[60px] h-[60px] rounded-md overflow-hidden bg-white shadow-sm border border-stone-200">
-      <Image
-        src={scene.image}
-        alt={`${scene.name} - traditional artisan sketch`}
-        width={60}
-        height={60}
-        className="w-full h-full object-cover"
-        priority={false}
-        unoptimized
-      />
+const ArtisanCard = ({ scene }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div 
+      className="flex flex-col items-center justify-center mx-3"
+      title={scene.name}
+      aria-label={scene.name}
+    >
+      <div className="w-[60px] h-[60px] rounded-md overflow-hidden bg-white shadow-sm border border-stone-200 relative">
+        {!isLoaded && (
+          <div className="absolute inset-0 bg-stone-200/70 animate-pulse" />
+        )}
+        <Image
+          src={scene.image}
+          alt={`${scene.name} - traditional artisan sketch`}
+          width={60}
+          height={60}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          priority
+          onLoad={() => setIsLoaded(true)}
+        />
+      </div>
+      <span className="mt-1 text-[10px] font-medium text-stone-700 tracking-wide">
+        {scene.name}
+      </span>
     </div>
-    <span className="mt-1 text-[10px] font-medium text-stone-700 tracking-wide">
-      {scene.name}
-    </span>
-  </div>
-);
+  );
+};
 
 const Divider = () => (
   <div className="flex items-center justify-center px-2 h-full">

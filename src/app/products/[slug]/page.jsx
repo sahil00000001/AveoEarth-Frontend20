@@ -189,7 +189,7 @@ export default function ProductDetailPage() {
             <p className="text-gray-600 mb-8">The product you're looking for doesn't exist or has been removed.</p>
             <button
               onClick={() => router.push('/explore')}
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-olive-600 hover:bg-olive-700"
             >
               Browse Products
             </button>
@@ -363,9 +363,9 @@ export default function ProductDetailPage() {
 
                   {/* Add to Cart Button or Quantity Controls */}
                   {addedToCart ? (
-                    <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-[43px] px-6 py-[12.8px] flex-1">
-                      <Check className="w-4 h-4 text-green-600" />
-                      <span className="font-semibold text-sm text-green-700">Added to Cart!</span>
+                    <div className="flex items-center gap-3 bg-olive-50 border border-olive-200 rounded-[43px] px-6 py-[12.8px] flex-1">
+                      <Check className="w-4 h-4 text-olive-600" />
+                      <span className="font-semibold text-sm text-olive-700">Added to Cart!</span>
                       <div className="flex items-center gap-2 ml-auto">
                         <button
                           onClick={() => handleQuantityChange(-1)}
@@ -559,7 +559,7 @@ export default function ProductDetailPage() {
                   {/* Feature cards */}
                   <div className="bg-white border border-[#e6e6e6] rounded-[4.5px] p-4 flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 text-green-600">
+                      <div className="w-6 h-6 text-olive-600">
                         <svg fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                         </svg>
@@ -570,7 +570,7 @@ export default function ProductDetailPage() {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 text-green-600">
+                      <div className="w-6 h-6 text-olive-600">
                         <svg fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                         </svg>

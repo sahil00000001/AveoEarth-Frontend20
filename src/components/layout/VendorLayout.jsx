@@ -8,7 +8,7 @@ export default function VendorLayout({ children }) {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-olive-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">A</span>
             </div>
             <span className="font-bold text-lg text-gray-900">AveoEarth</span>
@@ -74,7 +74,7 @@ export default function VendorLayout({ children }) {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+              <div className="w-6 h-6 bg-olive-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-xs">A</span>
               </div>
               <span className="text-gray-600">© 2025 AveoEarth Vendor Portal</span>

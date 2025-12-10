@@ -63,7 +63,7 @@ export default function OrderRow({ order, onStatusUpdate }) {
     switch (status?.toLowerCase()) {
       case 'fulfilled':
       case 'delivered':
-        return 'bg-green-100 text-green-800';
+        return 'bg-olive-100 text-green-800';
       case 'processing':
         return 'bg-blue-100 text-blue-800';
       case 'shipped':

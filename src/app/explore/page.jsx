@@ -16,7 +16,7 @@ function ExplorePageFallback() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-olive-600"></div>
       </div>
     </div>
   );
@@ -360,7 +360,7 @@ function ExplorePageContent() {
                     {activeFilters.search && (
                       <button
                         onClick={() => handleSearch('')}
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-olive-600 hover:bg-olive-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-olive-500"
                       >
                         Clear search
                       </button>

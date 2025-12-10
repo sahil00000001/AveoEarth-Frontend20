@@ -17,8 +17,8 @@ import {
 } from 'lucide-react';
 
 // --- Custom Tailwind Color Approximations ---
-// forest: emerald-700
-// moss: emerald-500
+// forest: olive-700
+// moss: olive-500
 // charcoal: gray-800
 // muted-foreground: gray-600
 
@@ -36,13 +36,13 @@ const PrimaryButton = ({ children, className = "", onClick, variant = "default" 
   let styles;
   if (variant === "secondary") {
     // Used for CTA inside the green section
-    styles = "bg-white text-emerald-700 hover:bg-emerald-50 hover:shadow-xl";
+    styles = "bg-white text-olive-700 hover:bg-olive-50 hover:shadow-xl";
   } else if (variant === "outline") {
     // Used for secondary button in Hero
-    styles = "border border-emerald-700 text-emerald-700 hover:bg-emerald-50/50 hover:shadow-md";
+    styles = "border border-olive-700 text-olive-700 hover:bg-olive-50/50 hover:shadow-md";
   } else {
     // Default/Primary button
-    styles = "bg-emerald-700 text-white hover:bg-emerald-800 shadow-md hover:shadow-xl";
+    styles = "bg-olive-700 text-white hover:bg-olive-800 shadow-md hover:shadow-xl";
   }
 
   return (
@@ -144,18 +144,18 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50 font-inter pt-12">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-emerald-200 py-20 md:py-32">
+      <section className="bg-gradient-to-br from-olive-50 to-olive-200 py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-3xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-r from-olive-600 to-olive-700 rounded-3xl flex items-center justify-center shadow-lg">
                 <Leaf className="w-8 h-8 text-white" />
               </div>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-800 leading-tight">
               Redefining Commerce for a
-              <span className="text-emerald-700 block mt-2">Sustainable Tomorrow</span>
+              <span className="text-olive-700 block mt-2">Sustainable Tomorrow</span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -185,7 +185,7 @@ export default function AboutPage() {
               return (
                 <CustomCard key={index} className="text-center transition-all hover:shadow-2xl">
                   <div className="p-2 space-y-2">
-                    <Icon className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
+                    <Icon className="w-10 h-10 text-olive-600 mx-auto mb-2" />
                     <div className="text-4xl font-extrabold text-gray-900">{stat.value}</div>
                     <div className="text-gray-500 font-medium">{stat.label}</div>
                   </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl lg:text-5xl font-extrabold text-gray-800 border-l-4 border-emerald-600 pl-4">
+              <h2 className="text-3xl lg:text-5xl font-extrabold text-gray-800 border-l-4 border-olive-600 pl-4">
                 Our Story: The Genesis of Change
               </h2>
               
@@ -220,7 +220,7 @@ export default function AboutPage() {
                   the noise and connect conscious consumers with verified eco-friendly products.
                 </p>
                 
-                <p className="font-semibold text-emerald-700">
+                <p className="font-semibold text-olive-700">
                   Today, AveoEarth is home to thousands of carefully curated products from 
                   brands that share our commitment to environmental stewardship and social 
                   responsibility. Every item in our marketplace undergoes rigorous vetting 
@@ -228,18 +228,18 @@ export default function AboutPage() {
                 </p>
               </div>
               
-              <PrimaryButton className="mt-6 bg-emerald-600 hover:bg-emerald-700">
+              <PrimaryButton className="mt-6 bg-olive-600 hover:bg-olive-700">
                 Learn More About Our Process
               </PrimaryButton>
             </div>
             
-            <div className="relative p-4 bg-white rounded-3xl shadow-2xl shadow-emerald-200">
+            <div className="relative p-4 bg-white rounded-3xl shadow-2xl shadow-olive-200">
               <img 
                 src="https://placehold.co/600x400/10b981/ffffff?text=Sustainable+Future" 
                 alt="Our sustainable mission"
                 className="w-full rounded-2xl object-cover h-96"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-700/30 to-transparent rounded-2xl m-4" />
+              <div className="absolute inset-0 bg-gradient-to-t from-olive-700/30 to-transparent rounded-2xl m-4" />
             </div>
           </div>
         </div>
@@ -261,9 +261,9 @@ export default function AboutPage() {
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <CustomCard key={index} className="text-center h-full transition-shadow hover:shadow-xl hover:border-emerald-200">
+                <CustomCard key={index} className="text-center h-full transition-shadow hover:shadow-xl hover:border-olive-200">
                   <div className="p-4 space-y-4">
-                    <div className="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center mx-auto shadow-md">
+                    <div className="w-16 h-16 bg-olive-600 rounded-xl flex items-center justify-center mx-auto shadow-md">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">{value.title}</h3>
@@ -295,13 +295,13 @@ export default function AboutPage() {
                   <img 
                     src={member.image}
                     alt={member.name}
-                    className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-emerald-500 shadow-md transition-all group-hover:border-emerald-700"
+                    className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-olive-500 shadow-md transition-all group-hover:border-olive-700"
                     // Fallback for placeholder images
                     onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/128x128/ccc/666?text=👤" }}
                   />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                    <p className="text-emerald-600 font-semibold">{member.role}</p>
+                    <p className="text-olive-600 font-semibold">{member.role}</p>
                     <p className="text-sm text-gray-500 mt-2 italic">{member.bio}</p>
                   </div>
                 </div>
@@ -312,7 +312,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 md:py-32 bg-emerald-50">
+      <section className="py-20 md:py-32 bg-olive-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-800 mb-4">
@@ -325,7 +325,7 @@ export default function AboutPage() {
           
           <div className="max-w-4xl mx-auto relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-emerald-300 transform -translate-x-1/2 hidden md:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-olive-300 transform -translate-x-1/2 hidden md:block" />
             
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
@@ -334,19 +334,19 @@ export default function AboutPage() {
                   className={`flex relative ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-start`}
                 >
                   {/* Icon Dot */}
-                  <div className="absolute md:relative flex-shrink-0 w-8 h-8 md:w-12 md:h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white font-bold z-10 shadow-xl border-4 border-white transform md:translate-x-0 -left-1.5">
+                  <div className="absolute md:relative flex-shrink-0 w-8 h-8 md:w-12 md:h-12 bg-olive-700 rounded-full flex items-center justify-center text-white font-bold z-10 shadow-xl border-4 border-white transform md:translate-x-0 -left-1.5">
                     <Clock className="w-5 h-5" />
                   </div>
 
                   {/* Content Card (Left/Right alternating) */}
                   <CustomCard 
-                    className={`p-6 w-full md:w-[calc(50%-24px)] transition-all duration-500 hover:shadow-emerald-300 shadow-lg ${
+                    className={`p-6 w-full md:w-[calc(50%-24px)] transition-all duration-500 hover:shadow-olive-300 shadow-lg ${
                       index % 2 === 0 ? 'md:ml-auto md:mr-6' : 'md:mr-auto md:ml-6'
                     }`}
                   >
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="text-xl font-bold text-gray-900">{milestone.title}</h3>
-                      <div className="text-2xl font-extrabold text-emerald-600">{milestone.year}</div>
+                      <div className="text-2xl font-extrabold text-olive-600">{milestone.year}</div>
                     </div>
                     <p className="text-gray-600">{milestone.description}</p>
                   </CustomCard>
@@ -379,7 +379,7 @@ export default function AboutPage() {
             </CustomCard>
             
             <CustomCard className="text-center hover:shadow-2xl">
-              <CertificationIcon icon={CheckCircle} colorClass="bg-gradient-to-r from-emerald-600 to-emerald-800" />
+              <CertificationIcon icon={CheckCircle} colorClass="bg-gradient-to-r from-olive-600 to-olive-800" />
               <h3 className="text-xl font-bold text-gray-900">Carbon Neutral</h3>
               <p className="text-gray-500 mt-2">
                 Offsetting $100\%$ of our operational carbon footprint through verified global projects.
@@ -387,7 +387,7 @@ export default function AboutPage() {
             </CustomCard>
             
             <CustomCard className="text-center hover:shadow-2xl">
-              <CertificationIcon icon={Star} colorClass="bg-gradient-to-r from-green-500 to-lime-600" />
+              <CertificationIcon icon={Star} colorClass="bg-gradient-to-r from-olive-500 to-lime-600" />
               <h3 className="text-xl font-bold text-gray-900">ISO 14001</h3>
               <p className="text-gray-500 mt-2">
                 Implementing robust environmental management systems that minimize our ecological impact globally.
@@ -398,7 +398,7 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 md:py-32 bg-emerald-700 text-white shadow-xl">
+      <section className="py-20 md:py-32 bg-olive-700 text-white shadow-xl">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-3xl lg:text-5xl font-extrabold">

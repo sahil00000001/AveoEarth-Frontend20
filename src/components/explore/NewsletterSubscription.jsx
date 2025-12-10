@@ -50,7 +50,7 @@ export default function NewsletterSubscription() {
       <div className="bg-[#eaeaea] px-6 py-12 lg:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
-            <div className="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-4 bg-olive-500 rounded-full flex items-center justify-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20 6L9 17L4 12"

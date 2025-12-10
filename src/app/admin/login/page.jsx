@@ -46,11 +46,11 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-green-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-olive-50 to-olive-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         {/* Header */}
         <div className="text-center">
-          <div className="mx-auto h-16 w-16 bg-emerald-600 rounded-full flex items-center justify-center">
+          <div className="mx-auto h-16 w-16 bg-olive-600 rounded-full flex items-center justify-center">
             <span className="text-white font-bold text-xl">AE</span>
           </div>
           <h2 className="mt-6 text-3xl font-bold text-gray-900">
@@ -82,7 +82,7 @@ export default function AdminLogin() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 focus:z-10 sm:text-sm"
+                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-olive-500 focus:border-olive-500 focus:z-10 sm:text-sm"
                 placeholder="admin@aveoearth.com"
               />
             </div>
@@ -100,7 +100,7 @@ export default function AdminLogin() {
                   required
                   value={formData.password}
                   onChange={handleChange}
-                  className="appearance-none relative block w-full px-3 py-2 pr-10 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 focus:z-10 sm:text-sm"
+                  className="appearance-none relative block w-full px-3 py-2 pr-10 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-olive-500 focus:border-olive-500 focus:z-10 sm:text-sm"
                   placeholder="Enter your password"
                 />
                 <button
@@ -123,7 +123,7 @@ export default function AdminLogin() {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-olive-600 focus:ring-olive-500 border-gray-300 rounded"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                   Remember me
@@ -131,7 +131,7 @@ export default function AdminLogin() {
               </div>
 
               <div className="text-sm">
-                <a href="#" className="font-medium text-emerald-600 hover:text-emerald-500">
+                <a href="#" className="font-medium text-olive-600 hover:text-olive-500">
                   Forgot your password?
                 </a>
               </div>
@@ -141,7 +141,7 @@ export default function AdminLogin() {
               <button
                 type="submit"
                 disabled={loading}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-olive-600 hover:bg-olive-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-olive-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>
@@ -160,7 +160,7 @@ export default function AdminLogin() {
         <div className="text-center">
           <p className="text-sm text-gray-600">
             Not an admin?{" "}
-            <a href="/" className="font-medium text-emerald-600 hover:text-emerald-500">
+            <a href="/" className="font-medium text-olive-600 hover:text-olive-500">
               Go to main site
             </a>
           </p>

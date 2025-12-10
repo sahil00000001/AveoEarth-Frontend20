@@ -115,7 +115,7 @@ export default function SettingsScreen() {
                   type="text"
             value={settings.general.siteName}
             onChange={(e) => handleSettingChange("general", "siteName", e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
                 />
               </div>
               <div>
@@ -126,7 +126,7 @@ export default function SettingsScreen() {
                   type="email"
             value={settings.general.adminEmail}
             onChange={(e) => handleSettingChange("general", "adminEmail", e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
                 />
         </div>
               </div>
@@ -139,7 +139,7 @@ export default function SettingsScreen() {
           value={settings.general.siteDescription}
           onChange={(e) => handleSettingChange("general", "siteDescription", e.target.value)}
           rows={3}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
                 />
               </div>
               
@@ -151,7 +151,7 @@ export default function SettingsScreen() {
           <select
             value={settings.general.timezone}
             onChange={(e) => handleSettingChange("general", "timezone", e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
           >
             <option value="Asia/Kolkata">Asia/Kolkata</option>
             <option value="UTC">UTC</option>
@@ -166,7 +166,7 @@ export default function SettingsScreen() {
           <select
             value={settings.general.currency}
             onChange={(e) => handleSettingChange("general", "currency", e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
           >
             <option value="INR">INR (₹)</option>
             <option value="USD">USD ($)</option>
@@ -181,7 +181,7 @@ export default function SettingsScreen() {
           <select
             value={settings.general.language}
             onChange={(e) => handleSettingChange("general", "language", e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
           >
             <option value="en">English</option>
             <option value="hi">Hindi</option>
@@ -218,7 +218,7 @@ export default function SettingsScreen() {
                 onChange={(e) => handleSettingChange("notifications", key, e.target.checked)}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-emerald-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-olive-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-olive-600"></div>
             </label>
           </div>
         ))}
@@ -241,7 +241,7 @@ export default function SettingsScreen() {
               onChange={(e) => handleSettingChange("security", "twoFactorAuth", e.target.checked)}
               className="sr-only peer"
             />
-            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-emerald-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-olive-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-olive-600"></div>
           </label>
         </div>
 
@@ -254,7 +254,7 @@ export default function SettingsScreen() {
               type="number"
               value={settings.security.sessionTimeout}
               onChange={(e) => handleSettingChange("security", "sessionTimeout", parseInt(e.target.value))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
             />
           </div>
               <div>
@@ -265,7 +265,7 @@ export default function SettingsScreen() {
               type="number"
               value={settings.security.loginAttempts}
               onChange={(e) => handleSettingChange("security", "loginAttempts", parseInt(e.target.value))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
                 />
               </div>
             </div>
@@ -277,7 +277,7 @@ export default function SettingsScreen() {
           <select
             value={settings.security.passwordPolicy}
             onChange={(e) => handleSettingChange("security", "passwordPolicy", e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
           >
             <option value="basic">Basic (6+ characters)</option>
             <option value="medium">Medium (8+ chars, 1 number)</option>
@@ -311,7 +311,7 @@ export default function SettingsScreen() {
                 onChange={(e) => handleSettingChange("payment", key, e.target.checked)}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-emerald-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-olive-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-olive-600"></div>
             </label>
                 </div>
         ))}
@@ -324,7 +324,7 @@ export default function SettingsScreen() {
             <select
               value={settings.payment.defaultGateway}
               onChange={(e) => handleSettingChange("payment", "defaultGateway", e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
             >
               <option value="razorpay">Razorpay</option>
               <option value="stripe">Stripe</option>
@@ -340,7 +340,7 @@ export default function SettingsScreen() {
               step="0.1"
               value={settings.payment.commissionRate}
               onChange={(e) => handleSettingChange("payment", "commissionRate", parseFloat(e.target.value))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
             />
             </div>
           </div>
@@ -373,7 +373,7 @@ export default function SettingsScreen() {
                 onChange={(e) => handleSettingChange("features", key, e.target.checked)}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-emerald-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-olive-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-olive-600"></div>
                   </label>
                 </div>
               ))}
@@ -394,7 +394,7 @@ export default function SettingsScreen() {
               value={value}
               onChange={(e) => handleSettingChange("integrations", key, e.target.value)}
               placeholder={`Enter ${key} configuration...`}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
             />
             <p className="text-xs text-gray-500 mt-1">
               {key === 'googleAnalytics' && 'Google Analytics tracking ID (e.g., GA-XXXXXXXXX)'}
@@ -435,7 +435,7 @@ export default function SettingsScreen() {
         <h1 className="text-2xl font-semibold text-black">Settings</h1>
         <div className="flex items-center gap-2">
           {saved && (
-            <div className="flex items-center gap-2 text-emerald-600">
+            <div className="flex items-center gap-2 text-olive-600">
               <CheckCircleIcon className="h-4 w-4" />
               <span className="text-sm">Settings saved!</span>
               </div>
@@ -443,7 +443,7 @@ export default function SettingsScreen() {
           <button
             onClick={handleSaveSettings}
             disabled={loading}
-            className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="px-4 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >
             {loading ? (
               <>
@@ -472,7 +472,7 @@ export default function SettingsScreen() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`${
                     activeTab === tab.id
-                      ? 'border-emerald-500 text-emerald-600'
+                      ? 'border-olive-500 text-olive-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2`}
                 >

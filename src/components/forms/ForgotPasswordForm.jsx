@@ -53,7 +53,7 @@ export default function ForgotPasswordForm() {
         <div className="max-w-md mx-auto">
           
           {message && (
-            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div className="mb-6 p-4 bg-olive-50 border border-olive-200 rounded-lg">
               <p className="text-green-800 text-sm">{message}</p>
             </div>
           )}

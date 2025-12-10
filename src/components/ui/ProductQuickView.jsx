@@ -303,9 +303,9 @@ const ProductQuickView = ({ onClose, product }) => {
 
               {/* Add to Cart Button or Quantity Controls */}
               {addedToCart ? (
-                <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-[43px] px-6 py-3">
-                  <Check className="w-4 h-4 text-green-600" />
-                  <span className="font-semibold text-sm text-green-700">Added to Cart!</span>
+                <div className="flex items-center gap-3 bg-olive-50 border border-olive-200 rounded-[43px] px-6 py-3">
+                  <Check className="w-4 h-4 text-olive-600" />
+                  <span className="font-semibold text-sm text-olive-700">Added to Cart!</span>
                   <div className="flex items-center gap-2 ml-auto">
                     <button
                       onClick={() => handleQuantityChange(-1)}

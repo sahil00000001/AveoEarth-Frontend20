@@ -8,36 +8,64 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Modern emerald-based brand colors
+        // Sustainability Nature Colors - Olive Green (Leaves) & Soil Brown (Earth)
         'brand': {
-          50: '#ecfdf5',
-          100: '#d1fae5', 
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981', // emerald-500 - primary brand color
-          600: '#059669', // emerald-600 - primary action color
-          700: '#047857', // emerald-700 - primary text/logo color
-          800: '#065f46',
-          900: '#064e3b',
+          50: '#f5f7f0',   // Very light olive tint
+          100: '#e8ecd8',  // Light sage
+          200: '#d4dcb8',  // Soft olive
+          300: '#b8c98a',  // Light olive green
+          400: '#8fbc5a',  // Medium olive
+          500: '#6b8e23',  // Olive drab - primary leaf color
+          600: '#556b2f',  // Dark olive green
+          700: '#4a5d28',  // Deep olive
+          800: '#3d4a21',  // Forest olive
+          900: '#2d3718',  // Dark forest
         },
         
-        // Legacy support - map to emerald equivalents
-        'green-primary': '#047857', // emerald-700
-        'green-secondary': '#059669', // emerald-600
-        'green-accent': '#10b981', // emerald-500
-        'green-light': '#d1fae5', // emerald-100
-        'green-subtle': '#ecfdf5', // emerald-50
+        // Olive Green - Plant Leaf Colors
+        'olive': {
+          50: '#f5f7f0',
+          100: '#e8ecd8',
+          200: '#d4dcb8',
+          300: '#b8c98a',
+          400: '#8fbc5a',
+          500: '#6b8e23',  // Classic olive drab
+          600: '#556b2f',  // Dark olive green
+          700: '#4a5d28',
+          800: '#3d4a21',
+          900: '#2d3718',
+        },
         
-        // Eco colors - modern emerald palette
-        'eco-primary': '#047857', // emerald-700
-        'eco-secondary': '#059669', // emerald-600
-        'eco-accent': '#10b981', // emerald-500
-        'eco-light': '#d1fae5', // emerald-100
-        'eco-subtle': '#ecfdf5', // emerald-50
-        'carbon-neutral': '#065f46', // emerald-800
-        'organic': '#34d399', // emerald-400
-        'renewable': '#6ee7b7', // emerald-300
+        // Soil Brown - Earth Colors
+        'soil': {
+          50: '#faf7f4',
+          100: '#f0e6db',
+          200: '#e0ccb8',
+          300: '#c9a882',
+          400: '#b08b5c',
+          500: '#8b7355',  // Medium soil brown
+          600: '#6b5642',  // Rich earth
+          700: '#5c4033',  // Dark earth
+          800: '#4a3328',
+          900: '#3d2a20',
+        },
+        
+        // Legacy support - mapped to olive
+        'green-primary': '#556b2f',   // Dark olive
+        'green-secondary': '#6b8e23', // Olive drab
+        'green-accent': '#8fbc5a',    // Light olive
+        'green-light': '#e8ecd8',     // Very light olive
+        'green-subtle': '#f5f7f0',    // Olive tint
+        
+        // Eco colors - Nature sustainability palette
+        'eco-primary': '#556b2f',     // Dark olive (leaves)
+        'eco-secondary': '#6b8e23',   // Olive drab
+        'eco-accent': '#8fbc5a',      // Light olive
+        'eco-light': '#e8ecd8',       // Soft sage
+        'eco-subtle': '#f5f7f0',      // Olive tint
+        'carbon-neutral': '#3d4a21',  // Deep forest
+        'organic': '#8b7355',         // Soil brown
+        'renewable': '#b8c98a',       // Light leaf green
         
         // Semantic colors
         'success': 'var(--color-success)',
@@ -117,9 +145,12 @@ module.exports = {
         'card-hover': "0 12px 32px rgba(0,0,0,0.10)",
       },
       backgroundImage: {
-        'gradient-moss': 'linear-gradient(135deg, #10b981 0%, #047857 100%)', // emerald-500 to emerald-700
-        'gradient-emerald': 'linear-gradient(135deg, #059669 0%, #047857 100%)', // emerald-600 to emerald-700
-        'gradient-brand': 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)', // emerald-50 to emerald-100
+        'gradient-moss': 'linear-gradient(135deg, #6b8e23 0%, #556b2f 100%)',     // Olive gradient
+        'gradient-olive': 'linear-gradient(135deg, #8fbc5a 0%, #6b8e23 100%)',    // Light to medium olive
+        'gradient-earth': 'linear-gradient(135deg, #8b7355 0%, #5c4033 100%)',    // Soil brown gradient
+        'gradient-nature': 'linear-gradient(135deg, #6b8e23 0%, #8b7355 100%)',   // Olive to soil
+        'gradient-brand': 'linear-gradient(135deg, #f5f7f0 0%, #e8ecd8 100%)',    // Light olive tint
+        'gradient-sustainability': 'linear-gradient(135deg, #556b2f 0%, #6b8e23 50%, #8b7355 100%)', // Full nature palette
       },
       keyframes: {
         blob: {

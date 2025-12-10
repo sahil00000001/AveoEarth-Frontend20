@@ -281,7 +281,7 @@ export default function AccountSettingsPage() {
       {authLoading ? (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-olive-600 mx-auto"></div>
             <p className="mt-4 text-gray-600">Loading account settings...</p>
           </div>
         </div>
@@ -289,7 +289,7 @@ export default function AccountSettingsPage() {
         <>
           {/* Success/Error Messages */}
           {success && (
-            <div className="fixed top-4 right-4 z-50 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+            <div className="fixed top-4 right-4 z-50 bg-olive-100 border border-olive-400 text-olive-700 px-4 py-3 rounded">
               {success}
             </div>
           )}

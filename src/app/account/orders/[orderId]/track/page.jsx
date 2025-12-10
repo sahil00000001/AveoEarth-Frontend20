@@ -88,7 +88,7 @@ const TrackingTimeline = ({ trackingData, order }) => {
           
           <div className="flex items-start space-x-4">
             {/* Timeline dot */}
-            <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+            <div className="flex-shrink-0 w-8 h-8 bg-olive-500 rounded-full flex items-center justify-center">
               <div className="w-3 h-3 bg-white rounded-full"></div>
             </div>
             

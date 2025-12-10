@@ -234,8 +234,8 @@ export default function ProductRecommendations({
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/85 via-white/75 to-emerald-100/80 rounded-2xl"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/30 via-transparent to-transparent rounded-2xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-olive-50/85 via-white/75 to-olive-100/80 rounded-2xl"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-olive-100/30 via-transparent to-transparent rounded-2xl"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {showTitle && (

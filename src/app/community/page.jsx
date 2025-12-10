@@ -26,7 +26,7 @@ export default function CommunityPage() {
   const [activeTab, setActiveTab] = useState("all");
 
   const communityStats = [
-    { label: "Active Members", value: "12,847", icon: Users, color: "text-emerald-600" },
+    { label: "Active Members", value: "12,847", icon: Users, color: "text-olive-600" },
     { label: "Posts This Month", value: "3,421", icon: MessageCircle, color: "text-blue-600" },
     { label: "Events Hosted", value: "156", icon: Calendar, color: "text-purple-600" },
     { label: "Impact Score", value: "98.7%", icon: TrendingUp, color: "text-orange-600" }
@@ -119,9 +119,9 @@ export default function CommunityPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-blue-50 pt-12">
+    <div className="min-h-screen bg-gradient-to-br from-olive-50 to-blue-50 pt-12">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-emerald-600 to-blue-600 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-olive-600 to-blue-600 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
@@ -143,16 +143,16 @@ export default function CommunityPage() {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-olive-100 mb-8 max-w-3xl mx-auto">
               Join thousands of eco-conscious individuals sharing ideas, inspiring change, and building a greener tomorrow.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg">
+              <Button size="lg" className="bg-olive-600 text-white hover:bg-olive-700 shadow-lg">
                 <Plus className="w-5 h-5 mr-2" />
                 Join Community
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-emerald-600">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-olive-600">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Start Discussion
               </Button>
@@ -204,7 +204,7 @@ export default function CommunityPage() {
                     onClick={() => setActiveTab(tab)}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                       activeTab === tab
-                        ? "bg-emerald-600 text-white"
+                        ? "bg-olive-600 text-white"
                         : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                     }`}
                   >
@@ -239,7 +239,7 @@ export default function CommunityPage() {
                         {post.tags.map((tag, index) => (
                           <span
                             key={index}
-                            className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm rounded-full"
+                            className="px-3 py-1 bg-olive-100 text-olive-700 text-sm rounded-full"
                           >
                             {tag}
                           </span>
@@ -256,7 +256,7 @@ export default function CommunityPage() {
                             <MessageCircle className="w-5 h-5" />
                             {post.comments}
                           </button>
-                          <button className="flex items-center gap-2 text-gray-500 hover:text-green-500 transition-colors">
+                          <button className="flex items-center gap-2 text-gray-500 hover:text-olive-500 transition-colors">
                             <Share2 className="w-5 h-5" />
                             {post.shares}
                           </button>
@@ -276,7 +276,7 @@ export default function CommunityPage() {
               {/* Upcoming Events */}
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-emerald-600" />
+                  <Calendar className="w-5 h-5 text-olive-600" />
                   Upcoming Events
                 </h3>
                 <div className="space-y-4">
@@ -284,7 +284,7 @@ export default function CommunityPage() {
                     <div key={event.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
                       <div className="flex items-start justify-between mb-2">
                         <h4 className="font-semibold text-gray-800">{event.title}</h4>
-                        <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">
+                        <span className="text-xs bg-olive-100 text-olive-700 px-2 py-1 rounded-full">
                           {event.type}
                         </span>
                       </div>
@@ -316,14 +316,14 @@ export default function CommunityPage() {
               {/* Top Contributors */}
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                  <Award className="w-5 h-5 text-emerald-600" />
+                  <Award className="w-5 h-5 text-olive-600" />
                   Top Contributors
                 </h3>
                 <div className="space-y-3">
                   {topContributors.map((contributor, index) => (
                     <div key={index} className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="flex items-center gap-2">
-                        <span className="text-lg font-bold text-emerald-600">#{index + 1}</span>
+                        <span className="text-lg font-bold text-olive-600">#{index + 1}</span>
                         <Image
                           src={contributor.avatar}
                           alt={contributor.name}
@@ -337,7 +337,7 @@ export default function CommunityPage() {
                         <div className="text-sm text-gray-500">{contributor.level}</div>
                       </div>
                       <div className="text-right">
-                        <div className="font-bold text-emerald-600">{contributor.points}</div>
+                        <div className="font-bold text-olive-600">{contributor.points}</div>
                         <div className="text-xs text-gray-500">points</div>
                       </div>
                     </div>
@@ -346,18 +346,18 @@ export default function CommunityPage() {
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-gradient-to-br from-emerald-600 to-blue-600 rounded-2xl p-6 text-white">
+              <div className="bg-gradient-to-br from-olive-600 to-blue-600 rounded-2xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-4">Quick Actions</h3>
                 <div className="space-y-3">
-                  <Button className="w-full bg-white text-emerald-600 hover:bg-emerald-50">
+                  <Button className="w-full bg-white text-olive-600 hover:bg-olive-50">
                     <Plus className="w-4 h-4 mr-2" />
                     Create Post
                   </Button>
-                  <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-emerald-600">
+                  <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-olive-600">
                     <Calendar className="w-4 h-4 mr-2" />
                     Host Event
                   </Button>
-                  <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-emerald-600">
+                  <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-olive-600">
                     <Globe className="w-4 h-4 mr-2" />
                     Find Groups
                   </Button>
@@ -369,20 +369,20 @@ export default function CommunityPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-olive-600 to-blue-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Make a Difference?
           </h2>
-          <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-olive-100 mb-8 max-w-2xl mx-auto">
             Join our community of changemakers and start your sustainability journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg">
+            <Button size="lg" className="bg-olive-600 text-white hover:bg-olive-700 shadow-lg">
               <Users className="w-5 h-5 mr-2" />
               Join Now
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-emerald-600">
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-olive-600">
               <Leaf className="w-5 h-5 mr-2" />
               Learn More
             </Button>

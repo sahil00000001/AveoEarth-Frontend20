@@ -143,7 +143,7 @@ const AddressSelector = ({
                         {selectedAddress.first_name} {selectedAddress.last_name}
                       </span>
                       {selectedAddress.is_default && (
-                        <span className="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+                        <span className="px-2 py-1 bg-olive-100 text-green-800 rounded-full text-xs font-medium">
                           Default
                         </span>
                       )}
@@ -196,7 +196,7 @@ const AddressSelector = ({
                         {address.first_name} {address.last_name}
                       </span>
                       {address.is_default && (
-                        <span className="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+                        <span className="px-2 py-1 bg-olive-100 text-green-800 rounded-full text-xs font-medium">
                           Default
                         </span>
                       )}

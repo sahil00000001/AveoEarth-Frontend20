@@ -79,7 +79,7 @@ const OrderTimeline = ({ order }) => {
                 isCancelled 
                   ? 'bg-red-100 text-red-800 border-2 border-red-200'
                   : isCompleted 
-                  ? 'bg-green-100 text-green-800 border-2 border-green-200' 
+                  ? 'bg-olive-100 text-green-800 border-2 border-olive-200' 
                   : 'bg-gray-100 text-gray-400 border-2 border-gray-200'
               }`}>
                 {status.icon}
@@ -89,7 +89,7 @@ const OrderTimeline = ({ order }) => {
                   {status.label}
                 </p>
                 {isCurrent && !isCancelled && (
-                  <p className="text-sm text-green-600 font-medium">Current Status</p>
+                  <p className="text-sm text-olive-600 font-medium">Current Status</p>
                 )}
                 {isCurrent && isCancelled && (
                   <p className="text-sm text-red-600 font-medium">Order Cancelled</p>
@@ -123,7 +123,7 @@ const OrderItem = ({ item }) => {
   const getFulfillmentStatusColor = (status) => {
     switch (status?.toLowerCase()) {
       case 'delivered':
-        return 'bg-green-100 text-green-800';
+        return 'bg-olive-100 text-green-800';
       case 'shipped':
         return 'bg-blue-100 text-blue-800';
       case 'processing':

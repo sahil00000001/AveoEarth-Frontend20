@@ -24,10 +24,10 @@ import {
 } from 'lucide-react';
 
 const quickActions = [
-  { icon: ShoppingCart, label: 'Track Order', action: 'track', color: 'text-emerald-700' },
-  { icon: Package, label: 'View Cart', action: 'cart', color: 'text-emerald-600' },
-  { icon: Leaf, label: 'Eco Products', action: 'eco', color: 'text-emerald-500' },
-  { icon: HelpCircle, label: 'Get Help', action: 'help', color: 'text-emerald-600' }
+  { icon: ShoppingCart, label: 'Track Order', action: 'track', color: 'text-olive-700' },
+  { icon: Package, label: 'View Cart', action: 'cart', color: 'text-olive-600' },
+  { icon: Leaf, label: 'Eco Products', action: 'eco', color: 'text-olive-500' },
+  { icon: HelpCircle, label: 'Get Help', action: 'help', color: 'text-olive-600' }
 ];
 
 const suggestionChips = [
@@ -46,7 +46,7 @@ const faqCategories = [
     id: 'general',
     title: 'General',
     icon: HelpCircle,
-    color: 'text-emerald-700',
+    color: 'text-olive-700',
     questions: [
       {
         id: 'what-is-aveoearth',
@@ -69,7 +69,7 @@ const faqCategories = [
     id: 'shopping',
     title: 'Shopping',
     icon: ShoppingCart,
-    color: 'text-emerald-600',
+    color: 'text-olive-600',
     questions: [
       {
         id: 'how-to-search',
@@ -87,7 +87,7 @@ const faqCategories = [
     id: 'orders',
     title: 'Orders & Shipping',
     icon: Truck,
-    color: 'text-emerald-600',
+    color: 'text-olive-600',
     questions: [
       {
         id: 'track-order',
@@ -110,7 +110,7 @@ const faqCategories = [
     id: 'payments',
     title: 'Payments',
     icon: CreditCard,
-    color: 'text-emerald-700',
+    color: 'text-olive-700',
     questions: [
       {
         id: 'payment-methods',
@@ -128,7 +128,7 @@ const faqCategories = [
     id: 'sustainability',
     title: 'Sustainability',
     icon: Leaf,
-    color: 'text-emerald-500',
+    color: 'text-olive-500',
     questions: [
       {
         id: 'eco-badges',
@@ -333,7 +333,7 @@ const ChatBot = () => {
   const getConnectionStatusIcon = () => {
     switch (connectionStatus) {
       case 'connected':
-        return <span className="w-2 h-2 bg-green-500 rounded-full"></span>;
+        return <span className="w-2 h-2 bg-olive-500 rounded-full"></span>;
       case 'disconnected':
         return <span className="w-2 h-2 bg-red-500 rounded-full"></span>;
       default:
@@ -374,12 +374,12 @@ const ChatBot = () => {
             <source src="/AveoBuddy.mp4" type="video/mp4" />
           </video>
           <div 
-            className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 items-center justify-center shadow-lg hidden"
+            className="w-16 h-16 rounded-full bg-gradient-to-br from-olive-500 to-olive-600 items-center justify-center shadow-lg hidden"
           >
             <MessageCircle className="w-8 h-8 text-white" />
           </div>
         </div>
-        <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+        <div className="absolute -top-1 -right-1 w-4 h-4 bg-olive-500 rounded-full animate-pulse"></div>
       </div>
     );
   }
@@ -391,7 +391,7 @@ const ChatBot = () => {
         isMinimized ? 'h-16' : 'h-[600px]'
       }`}
     >
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-4 text-white">
+      <div className="bg-gradient-to-r from-olive-600 to-olive-600 p-4 text-white">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="relative">
@@ -417,7 +417,7 @@ const ChatBot = () => {
             </div>
             <div>
               <h3 className="font-bold text-lg">AveoBuddy</h3>
-              <p className="text-xs text-green-100 flex items-center gap-1">
+              <p className="text-xs text-olive-100 flex items-center gap-1">
                 {getConnectionStatusIcon()}
                 <span>{getConnectionStatusText()}</span>
               </p>
@@ -447,7 +447,7 @@ const ChatBot = () => {
               onClick={() => setActiveTab('chat')}
               className={`flex-1 py-2 text-sm font-medium transition-colors ${
                 activeTab === 'chat' 
-                  ? 'text-green-600 border-b-2 border-green-600 bg-green-50' 
+                  ? 'text-olive-600 border-b-2 border-olive-600 bg-olive-50' 
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -457,7 +457,7 @@ const ChatBot = () => {
               onClick={() => setActiveTab('faq')}
               className={`flex-1 py-2 text-sm font-medium transition-colors ${
                 activeTab === 'faq' 
-                  ? 'text-green-600 border-b-2 border-green-600 bg-green-50' 
+                  ? 'text-olive-600 border-b-2 border-olive-600 bg-olive-50' 
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -488,7 +488,7 @@ const ChatBot = () => {
                   <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div className={`flex items-start space-x-2 max-w-[85%] ${msg.role === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
                       {msg.role === 'assistant' && (
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center shadow-sm flex-shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-olive-500 to-olive-600 flex items-center justify-center shadow-sm flex-shrink-0">
                           <BotIcon />
                         </div>
                       )}
@@ -506,7 +506,7 @@ const ChatBot = () => {
                         {msg.function_calls && msg.function_calls.length > 0 && (
                           <div className="mt-2 space-y-1">
                             {msg.function_calls.map((call, index) => (
-                              <span key={index} className="inline-block text-xs bg-green-100 text-green-700 rounded px-2 py-1 mr-1">
+                              <span key={index} className="inline-block text-xs bg-olive-100 text-olive-700 rounded px-2 py-1 mr-1">
                                 {call.function}
                               </span>
                             ))}
@@ -520,7 +520,7 @@ const ChatBot = () => {
                 {isLoading && (
                   <div className="flex justify-start">
                     <div className="flex items-start space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center shadow-sm">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-olive-500 to-olive-600 flex items-center justify-center shadow-sm">
                         <BotIcon />
                       </div>
                       <div className="bg-white rounded-2xl px-4 py-3 border border-gray-200 shadow-sm">
@@ -562,7 +562,7 @@ const ChatBot = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Ask me anything about sustainable products..."
-                    className="flex-1 px-4 py-2 text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="flex-1 px-4 py-2 text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                     disabled={!isAIConnected || isLoading}
                   />
                   <button
@@ -570,7 +570,7 @@ const ChatBot = () => {
                     disabled={!message.trim() || !isAIConnected || isLoading}
                     className={`p-2 rounded-full transition-colors ${
                       message.trim() && isAIConnected && !isLoading
-                        ? 'bg-green-600 hover:bg-green-700 text-white'
+                        ? 'bg-olive-600 hover:bg-olive-700 text-white'
                         : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                     }`}
                   >

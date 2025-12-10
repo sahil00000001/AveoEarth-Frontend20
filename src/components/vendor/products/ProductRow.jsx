@@ -117,7 +117,7 @@ export default function ProductRow({ product, onProductUpdated }) {
               className={`text-[8px] sm:text-[9px] font-poppins font-medium px-1 sm:px-2 py-0.5 rounded-[3px] w-fit sm:w-auto ${
                 localVisibility === 'hidden' 
                   ? 'bg-red-100 text-red-600' 
-                  : 'bg-green-100 text-green-600'
+                  : 'bg-olive-100 text-olive-600'
               }`}
             >
               {localVisibility === 'hidden' ? 'Hidden' : 'Visible'}
@@ -134,7 +134,7 @@ export default function ProductRow({ product, onProductUpdated }) {
               disabled={isLoading || isToggling}
               className={`w-[28px] h-[28px] sm:w-[33px] sm:h-[31px] border rounded-[5px] flex items-center justify-center hover:opacity-80 transition-colors ${
                 localVisibility !== 'hidden' 
-                  ? 'bg-green-100 border-green-300' 
+                  ? 'bg-olive-100 border-olive-300' 
                   : 'bg-gray-100 border-gray-300'
               }`}
               title={localVisibility !== 'hidden' ? 'Hide Product' : 'Show Product'}

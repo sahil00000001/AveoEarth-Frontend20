@@ -244,13 +244,13 @@ const Checkout = () => {
               <div key={stepItem.num} className="flex items-center">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                   step >= stepItem.num 
-                    ? 'bg-green-600 text-white' 
+                    ? 'bg-olive-600 text-white' 
                     : 'bg-gray-200 text-gray-600'
                 }`}>
                   {step > stepItem.num ? <Check className="w-4 h-4" /> : stepItem.num}
                 </div>
                 <span className={`ml-2 text-sm ${
-                  step >= stepItem.num ? 'text-green-600' : 'text-gray-500'
+                  step >= stepItem.num ? 'text-olive-600' : 'text-gray-500'
                 }`}>
                   {stepItem.label}
                 </span>
@@ -306,70 +306,70 @@ const Checkout = () => {
                           placeholder="First Name *"
                           value={billingAddress.firstName}
                           onChange={(e) => handleBillingChange('firstName', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                         <input
                           type="text"
                           placeholder="Last Name *"
                           value={billingAddress.lastName}
                           onChange={(e) => handleBillingChange('lastName', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                         <input
                           type="email"
                           placeholder="Email *"
                           value={billingAddress.email}
                           onChange={(e) => handleBillingChange('email', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                         <input
                           type="tel"
                           placeholder="Phone *"
                           value={billingAddress.phone}
                           onChange={(e) => handleBillingChange('phone', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                         <input
                           type="text"
                           placeholder="Address Line 1 *"
                           value={billingAddress.streetAddress}
                           onChange={(e) => handleBillingChange('streetAddress', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent md:col-span-2"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent md:col-span-2"
                         />
                         <input
                           type="text"
                           placeholder="Address Line 2"
                           value={billingAddress.addressLine2}
                           onChange={(e) => handleBillingChange('addressLine2', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent md:col-span-2"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent md:col-span-2"
                         />
                         <input
                           type="text"
                           placeholder="City *"
                           value={billingAddress.city}
                           onChange={(e) => handleBillingChange('city', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                         <input
                           type="text"
                           placeholder="State *"
                           value={billingAddress.state}
                           onChange={(e) => handleBillingChange('state', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                         <input
                           type="text"
                           placeholder="Postal Code *"
                           value={billingAddress.postalCode}
                           onChange={(e) => handleBillingChange('postalCode', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                         <input
                           type="text"
                           placeholder="Country *"
                           value={billingAddress.country}
                           onChange={(e) => handleBillingChange('country', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                         />
                       </div>
                     )}
@@ -383,7 +383,7 @@ const Checkout = () => {
                         id="sameAsBilling"
                         checked={sameAsBilling}
                         onChange={(e) => handleSameAsBillingToggle(e.target.checked)}
-                        className="w-4 h-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                        className="w-4 h-4 text-olive-600 focus:ring-olive-500 border-gray-300 rounded"
                       />
                       <label htmlFor="sameAsBilling" className="text-sm font-medium text-gray-700">
                         Shipping address is the same as billing address
@@ -417,70 +417,70 @@ const Checkout = () => {
                               placeholder="First Name *"
                               value={shippingAddress.firstName}
                               onChange={(e) => handleShippingChange('firstName', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                             <input
                               type="text"
                               placeholder="Last Name *"
                               value={shippingAddress.lastName}
                               onChange={(e) => handleShippingChange('lastName', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                             <input
                               type="email"
                               placeholder="Email *"
                               value={shippingAddress.email}
                               onChange={(e) => handleShippingChange('email', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                             <input
                               type="tel"
                               placeholder="Phone *"
                               value={shippingAddress.phone}
                               onChange={(e) => handleShippingChange('phone', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                             <input
                               type="text"
                               placeholder="Address Line 1 *"
                               value={shippingAddress.streetAddress}
                               onChange={(e) => handleShippingChange('streetAddress', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent md:col-span-2"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent md:col-span-2"
                             />
                             <input
                               type="text"
                               placeholder="Address Line 2"
                               value={shippingAddress.addressLine2}
                               onChange={(e) => handleShippingChange('addressLine2', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent md:col-span-2"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent md:col-span-2"
                             />
                             <input
                               type="text"
                               placeholder="City *"
                               value={shippingAddress.city}
                               onChange={(e) => handleShippingChange('city', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                             <input
                               type="text"
                               placeholder="State *"
                               value={shippingAddress.state}
                               onChange={(e) => handleShippingChange('state', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                             <input
                               type="text"
                               placeholder="Postal Code *"
                               value={shippingAddress.postalCode}
                               onChange={(e) => handleShippingChange('postalCode', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                             <input
                               type="text"
                               placeholder="Country *"
                               value={shippingAddress.country}
                               onChange={(e) => handleShippingChange('country', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                             />
                           </div>
                         )}
@@ -507,7 +507,7 @@ const Checkout = () => {
                           value="card"
                           checked={paymentMethod === 'card'}
                           onChange={(e) => setPaymentMethod(e.target.value)}
-                          className="w-4 h-4 text-green-600 focus:ring-green-500"
+                          className="w-4 h-4 text-olive-600 focus:ring-olive-500"
                         />
                         <div className="flex items-center gap-2">
                           <CreditCard className="w-5 h-5" />
@@ -524,7 +524,7 @@ const Checkout = () => {
                           value="upi"
                           checked={paymentMethod === 'upi'}
                           onChange={(e) => setPaymentMethod(e.target.value)}
-                          className="w-4 h-4 text-green-600 focus:ring-green-500"
+                          className="w-4 h-4 text-olive-600 focus:ring-olive-500"
                         />
                         <div className="flex items-center gap-2">
                           <Shield className="w-5 h-5" />
@@ -541,7 +541,7 @@ const Checkout = () => {
                           value="cod"
                           checked={paymentMethod === 'cod'}
                           onChange={(e) => setPaymentMethod(e.target.value)}
-                          className="w-4 h-4 text-green-600 focus:ring-green-500"
+                          className="w-4 h-4 text-olive-600 focus:ring-olive-500"
                         />
                         <div className="flex items-center gap-2">
                           <Truck className="w-5 h-5" />
@@ -568,7 +568,7 @@ const Checkout = () => {
                       value={customerNotes}
                       onChange={(e) => setCustomerNotes(e.target.value)}
                       rows={3}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent"
                     />
                   </div>
 
@@ -598,7 +598,7 @@ const Checkout = () => {
                       id="policy-agreement"
                       checked={agreeToPolicies}
                       onChange={(e) => setAgreeToPolicies(e.target.checked)}
-                      className="mt-1 h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                      className="mt-1 h-4 w-4 text-olive-600 focus:ring-olive-500 border-gray-300 rounded"
                     />
                     <div className="flex-1">
                       <label htmlFor="policy-agreement" className="text-sm text-gray-700 cursor-pointer">
@@ -607,7 +607,7 @@ const Checkout = () => {
                           href="/TermsandConditions"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-green-600 hover:text-green-800 underline"
+                          className="text-olive-600 hover:text-green-800 underline"
                         >
                           Terms & Conditions
                         </a>
@@ -616,7 +616,7 @@ const Checkout = () => {
                           href="/PrivacyPolicy"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-green-600 hover:text-green-800 underline"
+                          className="text-olive-600 hover:text-green-800 underline"
                         >
                           Privacy Policy
                         </a>
@@ -625,7 +625,7 @@ const Checkout = () => {
                           href="/RefundsandCancellation"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-green-600 hover:text-green-800 underline"
+                          className="text-olive-600 hover:text-green-800 underline"
                         >
                           Shipping & Delivery and Refunds & Cancellation
                         </a>{' '}
@@ -655,7 +655,7 @@ const Checkout = () => {
                 {step < 3 ? (
                   <button
                     onClick={handleNextStep}
-                    className="ml-auto px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                    className="ml-auto px-6 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700"
                   >
                     Continue
                   </button>
@@ -663,7 +663,7 @@ const Checkout = () => {
                   <button
                     onClick={handleCreateOrder}
                     disabled={loading || orderLoading || !agreeToPolicies}
-                    className="ml-auto px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
+                    className="ml-auto px-6 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700 disabled:opacity-50"
                   >
                     {loading || orderLoading ? 'Creating Order...' : 'Place Order'}
                   </button>

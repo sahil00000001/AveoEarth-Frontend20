@@ -65,7 +65,7 @@ const RotatingEarthIcon = ({ size = 32, onClick, className = "" }) => {
       />
       
       <motion.div
-        className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full"
+        className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-olive-400 rounded-full"
         animate={{ scale: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }}
         transition={{ duration: 1.5, repeat: Infinity }}
         style={{ boxShadow: "0 0 6px rgba(74, 222, 128, 0.8)" }}

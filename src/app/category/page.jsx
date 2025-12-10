@@ -43,12 +43,12 @@ const mockProducts = [
 ];
 
 function Badge({ children, className = "" }) {
-  return <span className={`inline-flex items-center px-2 py-0.5 font-semibold rounded-full text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 ${className}`}>{children}</span>;
+  return <span className={`inline-flex items-center px-2 py-0.5 font-semibold rounded-full text-xs bg-olive-50 text-olive-700 border border-olive-200 ${className}`}>{children}</span>;
 }
 
 function Button({ children, className = "", ...props }) {
   return (
-    <button {...props} className={`inline-flex items-center justify-center h-10 px-4 rounded-xl bg-emerald-700 text-white hover:bg-emerald-800 transition-colors ${className}`}>
+    <button {...props} className={`inline-flex items-center justify-center h-10 px-4 rounded-xl bg-olive-700 text-white hover:bg-olive-800 transition-colors ${className}`}>
       {children}
     </button>
   );
@@ -79,7 +79,7 @@ function ProductCard({ product, viewMode }) {
           </div>
         </div>
         <div className="flex flex-col items-end min-w-[150px]">
-          <span className="text-2xl font-bold text-emerald-700">{formatPrice(product.price)}</span>
+          <span className="text-2xl font-bold text-olive-700">{formatPrice(product.price)}</span>
           <span className="text-sm text-gray-500 line-through">{formatPrice(product.originalPrice)}</span>
           <Button className="mt-2">
             <ShoppingCart className="w-4 h-4 mr-2" /> Cart
@@ -96,7 +96,7 @@ function ProductCard({ product, viewMode }) {
           <Heart className="w-4 h-4" />
         </button>
         <div className="absolute top-3 left-3">
-          <Badge className="bg-emerald-700 text-white border-emerald-700">{product.ecoScore}</Badge>
+          <Badge className="bg-olive-700 text-white border-olive-700">{product.ecoScore}</Badge>
         </div>
       </div>
       <div className="p-4 space-y-3">
@@ -115,10 +115,10 @@ function ProductCard({ product, viewMode }) {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-emerald-700">{formatPrice(product.price)}</span>
+            <span className="text-2xl font-bold text-olive-700">{formatPrice(product.price)}</span>
             <span className="text-sm text-gray-500 line-through">{formatPrice(product.originalPrice)}</span>
           </div>
-          <div className="flex items-center gap-1 text-xs text-emerald-700">
+          <div className="flex items-center gap-1 text-xs text-olive-700">
             <Leaf className="w-3 h-3" /> Eco
           </div>
         </div>
@@ -204,12 +204,12 @@ export default function CategoryIndexPage() {
     <aside className={`w-full lg:w-80 space-y-6 p-6 lg:p-0 ${isMobile ? 'h-full overflow-y-auto' : 'hidden lg:block'}`}>
       <div className="lg:sticky lg:top-4 space-y-6">
         <h3 className="font-extrabold text-2xl text-neutral-800 flex items-center justify-between">
-          <span className='flex items-center gap-2'><SlidersHorizontal className="w-5 h-5 text-emerald-700" /> Filter & Category</span>
+          <span className='flex items-center gap-2'><SlidersHorizontal className="w-5 h-5 text-olive-700" /> Filter & Category</span>
           <button onClick={clearAllFilters} className="text-sm text-red-500 hover:text-red-700">Clear All</button>
         </h3>
         <Card className="p-4 space-y-1">
           <h4 className="font-bold text-base text-neutral-800 mb-2 flex items-center gap-2">
-            <Filter className="w-4 h-4 text-emerald-700" />
+            <Filter className="w-4 h-4 text-olive-700" />
             Product Categories
           </h4>
           <div className="space-y-1 max-h-60 overflow-y-auto">
@@ -217,7 +217,7 @@ export default function CategoryIndexPage() {
               <button
                 key={slug}
                 onClick={() => setCurrentCategory(slug)}
-                className={`w-full text-left px-3 py-2 rounded-xl text-sm transition-colors ${currentCategory === slug ? 'bg-emerald-700 text-white' : 'text-neutral-700 hover:bg-neutral-100'}`}
+                className={`w-full text-left px-3 py-2 rounded-xl text-sm transition-colors ${currentCategory === slug ? 'bg-olive-700 text-white' : 'text-neutral-700 hover:bg-neutral-100'}`}
               >
                 {name}
               </button>
@@ -226,12 +226,12 @@ export default function CategoryIndexPage() {
         </Card>
         <Card className="p-4 space-y-2">
           <h4 className="font-bold text-base text-neutral-800 flex items-center gap-2">
-            <Leaf className="w-4 h-4 text-emerald-700" /> Eco Certifications
+            <Leaf className="w-4 h-4 text-olive-700" /> Eco Certifications
           </h4>
           <div className="space-y-2 max-h-48 overflow-y-auto">
             {filterOptions.badges.map((badge) => (
               <label key={badge} className="flex items-center gap-3 cursor-pointer">
-                <input type="checkbox" className="w-4 h-4 accent-emerald-700 border-gray-300 rounded" checked={selectedBadges.includes(badge)} onChange={() => handleBadgeChange(badge)} />
+                <input type="checkbox" className="w-4 h-4 accent-olive-700 border-gray-300 rounded" checked={selectedBadges.includes(badge)} onChange={() => handleBadgeChange(badge)} />
                 <span className="text-sm text-neutral-600">{badge}</span>
               </label>
             ))}
@@ -244,7 +244,7 @@ export default function CategoryIndexPage() {
           <div className="space-y-2">
             {filterOptions.rating.map((rating) => (
               <label key={rating} className="flex items-center gap-3 cursor-pointer">
-                <input type="checkbox" className="w-4 h-4 accent-emerald-700 border-gray-300 rounded" checked={selectedRating.includes(rating)} onChange={() => handleRatingChange(rating)} />
+                <input type="checkbox" className="w-4 h-4 accent-olive-700 border-gray-300 rounded" checked={selectedRating.includes(rating)} onChange={() => handleRatingChange(rating)} />
                 <span className="text-sm text-neutral-600">{rating}</span>
               </label>
             ))}
@@ -258,14 +258,14 @@ export default function CategoryIndexPage() {
     <div className="min-h-screen bg-gray-50 pt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         <nav className="text-sm text-neutral-500">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-olive-700">Home</Link>
           <span className="mx-2">/</span>
           <span className="text-neutral-800 font-medium">{categoryName}</span>
         </nav>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-        <div className="w-full min-h-[140px] rounded-2xl bg-gradient-to-r from-emerald-700 to-emerald-500 text-white flex items-center justify-center shadow">
+        <div className="w-full min-h-[140px] rounded-2xl bg-gradient-to-r from-olive-700 to-olive-500 text-white flex items-center justify-center shadow">
           <div className="text-center p-6">
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">{categoryName}</h1>
             <p className="text-lg sm:text-xl font-medium mt-1 opacity-90">{categoryTagline}</p>
@@ -307,7 +307,7 @@ export default function CategoryIndexPage() {
                   placeholder="Search products, keywords, or badges..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-600 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-olive-600 focus:border-transparent"
                 />
               </div>
               <div className="flex items-center gap-4">
@@ -315,15 +315,15 @@ export default function CategoryIndexPage() {
                   <span className="inline-flex items-center"><Filter className="w-4 h-4 mr-2" /> Filters</span>
                 </button>
                 <div className="relative">
-                  <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="appearance-none text-sm border border-gray-300 rounded-xl pl-3 pr-8 py-2 bg-white text-neutral-800 focus:ring-2 focus:ring-emerald-600">
+                  <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="appearance-none text-sm border border-gray-300 rounded-xl pl-3 pr-8 py-2 bg-white text-neutral-800 focus:ring-2 focus:ring-olive-600">
                     {sortOptions.map(o => (<option key={o.value} value={o.value}>{o.label}</option>))}
                   </select>
                   <ChevronDown className="w-4 h-4 absolute right-2 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none" />
                 </div>
                 <div className="flex border border-gray-300 rounded-xl bg-white">
-                  <button onClick={() => setViewMode('grid')} className={`px-3 py-2 rounded-l-xl ${viewMode === 'grid' ? 'bg-emerald-700 text-white' : 'text-neutral-600'}`}><Grid3X3 className="w-4 h-4" /></button>
+                  <button onClick={() => setViewMode('grid')} className={`px-3 py-2 rounded-l-xl ${viewMode === 'grid' ? 'bg-olive-700 text-white' : 'text-neutral-600'}`}><Grid3X3 className="w-4 h-4" /></button>
                   <div className="w-px bg-gray-300" />
-                  <button onClick={() => setViewMode('list')} className={`px-3 py-2 rounded-r-xl ${viewMode === 'list' ? 'bg-emerald-700 text-white' : 'text-neutral-600'}`}><LayoutList className="w-4 h-4" /></button>
+                  <button onClick={() => setViewMode('list')} className={`px-3 py-2 rounded-r-xl ${viewMode === 'list' ? 'bg-olive-700 text-white' : 'text-neutral-600'}`}><LayoutList className="w-4 h-4" /></button>
                 </div>
               </div>
             </div>
@@ -334,7 +334,7 @@ export default function CategoryIndexPage() {
               ))}
               {finalProducts.length === 0 && (
                 <div className="col-span-full text-center py-16 border-2 border-dashed border-gray-300 rounded-xl bg-white">
-                  <Leaf className="w-10 h-10 mx-auto text-emerald-600 mb-4" />
+                  <Leaf className="w-10 h-10 mx-auto text-olive-600 mb-4" />
                   <p className="text-xl font-medium text-neutral-800">No products found!</p>
                   <p className="text-neutral-500">Try adjusting your filters, category, or search term.</p>
                 </div>

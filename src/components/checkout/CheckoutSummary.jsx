@@ -182,7 +182,7 @@ export default function CheckoutSummary({ cartItems = [], subtotal = 0, shipping
               id="policy-agreement-cart"
               checked={agreeToPolicies}
               onChange={(e) => setAgreeToPolicies(e.target.checked)}
-              className="mt-1 h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+              className="mt-1 h-4 w-4 text-olive-600 focus:ring-olive-500 border-gray-300 rounded"
             />
             <div className="flex-1">
               <label htmlFor="policy-agreement-cart" className="text-sm text-gray-700 cursor-pointer">
@@ -191,7 +191,7 @@ export default function CheckoutSummary({ cartItems = [], subtotal = 0, shipping
                   href="/TermsandConditions"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-600 hover:text-green-800 underline"
+                  className="text-olive-600 hover:text-green-800 underline"
                 >
                   Terms & Conditions
                 </a>
@@ -200,7 +200,7 @@ export default function CheckoutSummary({ cartItems = [], subtotal = 0, shipping
                   href="/PrivacyPolicy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-600 hover:text-green-800 underline"
+                  className="text-olive-600 hover:text-green-800 underline"
                 >
                   Privacy Policy
                 </a>
@@ -209,7 +209,7 @@ export default function CheckoutSummary({ cartItems = [], subtotal = 0, shipping
                   href="/RefundsandCancellation"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-600 hover:text-green-800 underline"
+                  className="text-olive-600 hover:text-green-800 underline"
                 >
                   Shipping & Delivery and Refunds & Cancellation
                 </a>{' '}

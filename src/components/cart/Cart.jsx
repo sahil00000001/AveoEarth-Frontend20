@@ -129,7 +129,7 @@ const Cart = ({ isOpen, onClose, showCheckoutButton = true }) => {
         <div className="flex flex-col h-full">
           {loading && !cart ? (
             <div className="flex-1 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-olive-600"></div>
             </div>
           ) : error ? (
             <div className="flex-1 flex flex-col items-center justify-center p-4">
@@ -147,7 +147,7 @@ const Cart = ({ isOpen, onClose, showCheckoutButton = true }) => {
               </p>
               <button
                 onClick={handleContinueShopping}
-                className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors"
+                className="bg-olive-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-olive-700 transition-colors"
               >
                 Continue Shopping
               </button>
@@ -270,7 +270,7 @@ const Cart = ({ isOpen, onClose, showCheckoutButton = true }) => {
                   {showCheckoutButton && (
                     <button
                       onClick={handleCheckout}
-                      className="w-full bg-green-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                      className="w-full bg-olive-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-olive-700 transition-colors flex items-center justify-center gap-2"
                     >
                       <CreditCard className="w-4 h-4" />
                       Proceed to Checkout
@@ -321,13 +321,13 @@ export const MiniCart = ({ onOpenCart }) => {
       <ShoppingCart className="w-6 h-6" />
       
       {!loading && cartCount > 0 && (
-        <span className="absolute -top-1 -right-1 bg-green-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+        <span className="absolute -top-1 -right-1 bg-olive-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
           {cartCount > 99 ? '99+' : cartCount}
         </span>
       )}
       
       {loading && (
-        <span className="absolute -top-1 -right-1 w-3 h-3 border border-green-600 border-t-transparent rounded-full animate-spin"></span>
+        <span className="absolute -top-1 -right-1 w-3 h-3 border border-olive-600 border-t-transparent rounded-full animate-spin"></span>
       )}
     </button>
   );

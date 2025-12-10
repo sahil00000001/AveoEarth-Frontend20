@@ -16,8 +16,15 @@ import RotatingEarthIcon from "../ai/RotatingEarthIcon";
 const ArtisanTicker = dynamic(() => import("./ArtisanTicker"), { 
   ssr: false,
   loading: () => (
-    <div className="flex items-center justify-center w-full h-[80px] bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 border-b border-stone-200">
-      <span className="text-stone-600 text-xs">Loading artisan scenes...</span>
+    <div className="flex items-center justify-center w-full h-[80px] bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 border-b border-stone-200 overflow-hidden">
+      <div className="flex items-center gap-6 animate-pulse">
+        {[...Array(7)].map((_, i) => (
+          <div key={i} className="flex flex-col items-center">
+            <div className="w-[60px] h-[60px] rounded-md bg-stone-200/70" />
+            <div className="mt-1 w-12 h-2 bg-stone-200/70 rounded" />
+          </div>
+        ))}
+      </div>
     </div>
   )
 });
@@ -84,7 +91,7 @@ const VendorProfile = ({ isLoggedIn, userProfile }) => {
               <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#666" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </div>
-          <span className="absolute -top-1 -right-1 bg-emerald-500 text-white text-[9px] rounded-full w-3.5 h-3.5 flex items-center justify-center font-bold">6</span>
+          <span className="absolute -top-1 -right-1 bg-olive-500 text-white text-[9px] rounded-full w-3.5 h-3.5 flex items-center justify-center font-bold">6</span>
         </motion.div>
       )}
       
@@ -95,7 +102,7 @@ const VendorProfile = ({ isLoggedIn, userProfile }) => {
             onClick={() => setIsVendorPopupOpen(!isVendorPopupOpen)}
             whileHover={{ scale: 1.02 }}
           >
-            <div className="w-8 h-8 rounded-full overflow-hidden bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full overflow-hidden bg-gradient-to-br from-olive-400 to-olive-600 flex items-center justify-center">
               {userProfile?.avatar_url ? (
                 <img src={userProfile.avatar_url} alt="Profile" className="w-full h-full object-cover"/>
               ) : (
@@ -126,7 +133,7 @@ const VendorProfile = ({ isLoggedIn, userProfile }) => {
               >
                 <Link 
                   href="/vendor/dashboard" 
-                  className="flex items-center px-3 py-2 text-[11px] text-gray-700 hover:bg-emerald-50 transition-colors"
+                  className="flex items-center px-3 py-2 text-[11px] text-gray-700 hover:bg-olive-50 transition-colors"
                   onClick={() => setIsVendorPopupOpen(false)}
                 >
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="mr-2">
@@ -155,7 +162,7 @@ const VendorProfile = ({ isLoggedIn, userProfile }) => {
         </div>
       ) : (
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-          <Link href="/signup" className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white px-4 py-1.5 rounded-full text-[11px] font-medium transition-all shadow-sm hover:shadow-md">
+          <Link href="/signup" className="bg-gradient-to-r from-olive-500 to-olive-600 hover:from-olive-600 hover:to-olive-700 text-white px-4 py-1.5 rounded-full text-[11px] font-medium transition-all shadow-sm hover:shadow-md">
             Join Community
           </Link>
         </motion.div>
@@ -167,14 +174,14 @@ const VendorProfile = ({ isLoggedIn, userProfile }) => {
 const NavLink = ({ href, children, isActive }) => (
   <Link href={href}>
     <motion.span 
-      className={`relative text-[13px] font-medium cursor-pointer transition-colors ${isActive ? 'text-emerald-600' : 'text-gray-600 hover:text-emerald-600'}`}
+      className={`relative text-[13px] font-medium cursor-pointer transition-colors ${isActive ? 'text-olive-600' : 'text-gray-600 hover:text-olive-600'}`}
       whileHover={{ y: -1 }}
     >
       {children}
       {isActive && (
         <motion.div 
           layoutId="activeNav"
-          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-emerald-500 rounded-full"
+          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-olive-500 rounded-full"
         />
       )}
     </motion.span>
@@ -280,7 +287,7 @@ export default function Navbar() {
               >
                 <Image src="/logo.png" alt="AveoEarth" width={24} height={24} className="w-full h-full object-contain" />
               </motion.div>
-              <span className="text-base font-semibold bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent hidden sm:block">
+              <span className="text-base font-semibold bg-gradient-to-r from-olive-600 to-olive-700 bg-clip-text text-transparent hidden sm:block">
                 AveoEarth
               </span>
             </Link>
@@ -307,7 +314,7 @@ export default function Navbar() {
                 className={`hidden md:flex items-center transition-all duration-300 ${isSearchFocused ? 'w-56' : 'w-44'}`}
                 animate={{ width: isSearchFocused ? 224 : 176 }}
               >
-                <div className={`flex items-center w-full bg-gray-50 rounded-full px-3 py-1.5 border transition-all duration-200 ${isSearchFocused ? 'border-emerald-300 shadow-sm' : 'border-transparent'}`}>
+                <div className={`flex items-center w-full bg-gray-50 rounded-full px-3 py-1.5 border transition-all duration-200 ${isSearchFocused ? 'border-olive-300 shadow-sm' : 'border-transparent'}`}>
                   <SearchIcon />
                   <input
                     type="text"
@@ -332,7 +339,7 @@ export default function Navbar() {
                     <div className="relative">
                       <motion.button 
                         onClick={() => setIsUserPopupOpen(!isUserPopupOpen)}
-                        className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-colors"
+                        className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:text-olive-600 hover:bg-olive-50 transition-colors"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -372,7 +379,7 @@ export default function Navbar() {
                     className="hover:scale-110 transition-transform"
                   />
                   <motion.div
-                    className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full"
+                    className="absolute -top-1 -right-1 w-2 h-2 bg-olive-500 rounded-full"
                     animate={{ scale: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   />
@@ -424,7 +431,7 @@ export default function Navbar() {
                   <Link 
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block py-2 text-[12px] text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+                    className="block py-2 text-[12px] text-gray-700 hover:text-olive-600 font-medium transition-colors"
                   >
                     {item.label}
                   </Link>

@@ -186,7 +186,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
 
         {loading ? (
           <div className="p-8 text-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-olive-600 mx-auto"></div>
             <p className="mt-2 text-gray-600">Loading product data...</p>
           </div>
         ) : (
@@ -202,7 +202,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                   required
                 />
               </div>
@@ -216,7 +216,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   name="sku"
                   value={formData.sku}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                 />
               </div>
 
@@ -230,7 +230,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   name="price"
                   value={formData.price}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                   required
                 />
               </div>
@@ -243,7 +243,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   name="category_id"
                   value={formData.category_id}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                 >
                   <option value="">Select Category</option>
                   {categories.map(cat => (
@@ -260,7 +260,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   name="brand_id"
                   value={formData.brand_id}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                 >
                   <option value="">Select Brand</option>
                   {brands.map(brand => (
@@ -277,7 +277,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   name="status"
                   value={formData.status}
                   onChange={handleInputChange}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                 >
                   <option value="draft">Draft</option>
                   <option value="active">Active</option>
@@ -297,7 +297,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   value={formData.short_description}
                   onChange={handleInputChange}
                   rows={2}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                 />
               </div>
 
@@ -310,7 +310,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                   value={formData.description}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                 />
               </div>
             </div>
@@ -328,7 +328,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                     name="quantity"
                     value={inventory.quantity}
                     onChange={handleInventoryChange}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                   />
                 </div>
 
@@ -341,7 +341,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                     name="low_stock_threshold"
                     value={inventory.low_stock_threshold}
                     onChange={handleInventoryChange}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                   />
                 </div>
 
@@ -355,7 +355,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                     value={inventory.location}
                     onChange={handleInventoryChange}
                     placeholder="e.g., Warehouse A"
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500"
                   />
                 </div>
               </div>
@@ -387,7 +387,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                           </svg>
                         </button>
                         {image.is_primary && (
-                          <span className="absolute bottom-1 left-1 bg-green-500 text-white text-xs px-1 rounded">
+                          <span className="absolute bottom-1 left-1 bg-olive-500 text-white text-xs px-1 rounded">
                             Primary
                           </span>
                         )}
@@ -438,8 +438,8 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
                     file:mr-4 file:py-2 file:px-4
                     file:rounded-full file:border-0
                     file:text-sm file:font-semibold
-                    file:bg-green-50 file:text-green-700
-                    hover:file:bg-green-100"
+                    file:bg-olive-50 file:text-olive-700
+                    hover:file:bg-olive-100"
                 />
               </div>
             </div>
@@ -456,7 +456,7 @@ export default function EditProductModal({ isOpen, onClose, productId, onProduct
               </button>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50"
+                className="flex-1 px-4 py-2 bg-olive-600 text-white rounded-md hover:bg-olive-700 disabled:opacity-50"
                 disabled={saving}
               >
                 {saving ? 'Saving...' : 'Save Changes'}

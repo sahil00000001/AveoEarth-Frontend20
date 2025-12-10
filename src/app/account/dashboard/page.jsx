@@ -20,7 +20,7 @@ const StatusBadge = ({ status }) => {
       case 'shipped':
         return 'bg-[#f1f1f1] text-black';
       case 'delivered':
-        return 'bg-green-100 text-green-800';
+        return 'bg-olive-100 text-green-800';
       case 'cancelled':
         return 'bg-red-100 text-red-800';
       default:

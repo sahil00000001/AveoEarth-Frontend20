@@ -165,7 +165,7 @@ export default function SearchBar({
               }
             }}
             placeholder={placeholder}
-            className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all duration-200"
+            className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-transparent outline-none transition-all duration-200"
           />
           {searchQuery && (
             <button
@@ -187,7 +187,7 @@ export default function SearchBar({
         >
           {loading ? (
             <div className="p-4 text-center text-gray-500">
-              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-green-500 mx-auto"></div>
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-olive-500 mx-auto"></div>
               <p className="mt-2 text-sm">Searching...</p>
             </div>
           ) : (
@@ -198,7 +198,7 @@ export default function SearchBar({
                   type="button"
                   onClick={() => handleSuggestionClick(suggestion)}
                   className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-b-0 ${
-                    index === selectedSuggestionIndex ? 'bg-green-50' : ''
+                    index === selectedSuggestionIndex ? 'bg-olive-50' : ''
                   }`}
                 >
                   <div className="flex items-center">

@@ -15,12 +15,12 @@ const Button = forwardRef(({
   const baseClasses = "inline-flex items-center justify-center font-poppins font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
   
   const variants = {
-    primary: "bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg hover:shadow-xl border-2 border-emerald-600 hover:border-emerald-700",
-    secondary: "bg-white text-emerald-700 hover:bg-emerald-50 border-2 border-emerald-200 hover:border-emerald-300 shadow-md hover:shadow-lg",
-    outline: "border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white",
-    ghost: "text-emerald-700 hover:bg-emerald-100",
+    primary: "bg-olive-600 text-white hover:bg-olive-700 shadow-lg hover:shadow-xl border-2 border-olive-600 hover:border-olive-700",
+    secondary: "bg-white text-olive-700 hover:bg-olive-50 border-2 border-olive-200 hover:border-olive-300 shadow-md hover:shadow-lg",
+    outline: "border-2 border-olive-600 text-olive-600 hover:bg-olive-600 hover:text-white",
+    ghost: "text-olive-700 hover:bg-olive-100",
     danger: "bg-red-600 text-white hover:bg-red-700 shadow-lg",
-    success: "bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg"
+    success: "bg-olive-600 text-white hover:bg-olive-700 shadow-lg"
   };
   
   const sizes = {

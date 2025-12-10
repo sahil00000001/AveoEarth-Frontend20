@@ -195,13 +195,13 @@ const FloatingChatBot = () => {
                 }}
               />
             ) : (
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-olive-500 to-olive-600 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow">
                 <MessageCircle className="w-8 h-8 text-white" />
               </div>
             )}
             
             <motion.div 
-              className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full"
+              className="absolute -top-1 -right-1 w-4 h-4 bg-olive-500 rounded-full"
               animate={{ 
                 scale: [1, 1.2, 1],
                 opacity: [0.8, 1, 0.8]

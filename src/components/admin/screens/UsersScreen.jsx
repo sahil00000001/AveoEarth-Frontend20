@@ -134,7 +134,7 @@ export default function UsersScreen() {
 
   const getStatusBadge = (status) => {
     const statusConfig = {
-      active: { color: "bg-emerald-100 text-emerald-800", icon: CheckCircleIcon },
+      active: { color: "bg-olive-100 text-olive-800", icon: CheckCircleIcon },
       pending: { color: "bg-yellow-100 text-yellow-800", icon: ClockIcon },
       verified: { color: "bg-blue-100 text-blue-800", icon: CheckCircleIcon },
       suspended: { color: "bg-red-100 text-red-800", icon: XCircleIcon }
@@ -199,7 +199,7 @@ export default function UsersScreen() {
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold text-black">User Management</h1>
-        <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2">
+        <button className="px-4 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700 transition-colors flex items-center gap-2">
           <UserPlusIcon className="h-4 w-4" />
           Add User
           </button>
@@ -217,7 +217,7 @@ export default function UsersScreen() {
                 placeholder="Search users by name or email..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
               />
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function UsersScreen() {
             <select
               value={filterRole}
               onChange={(e) => setFilterRole(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
             >
               <option value="all">All Roles</option>
               <option value="buyer">Buyers</option>
@@ -241,7 +241,7 @@ export default function UsersScreen() {
             <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
             >
               <option value="all">All Status</option>
               <option value="active">Active</option>
@@ -255,15 +255,15 @@ export default function UsersScreen() {
 
       {/* Bulk Actions */}
       {selectedUsers.length > 0 && (
-        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <div className="bg-olive-50 border border-olive-200 rounded-lg p-4">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-emerald-800">
+            <span className="text-sm font-medium text-olive-800">
               {selectedUsers.length} user{selectedUsers.length > 1 ? 's' : ''} selected
             </span>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => handleBulkAction('activate')}
-                className="px-3 py-1 bg-emerald-600 text-white text-sm rounded hover:bg-emerald-700 transition-colors"
+                className="px-3 py-1 bg-olive-600 text-white text-sm rounded hover:bg-olive-700 transition-colors"
               >
                 Activate
               </button>
@@ -301,7 +301,7 @@ export default function UsersScreen() {
                     type="checkbox"
                     checked={selectedUsers.length === filteredUsers.length && filteredUsers.length > 0}
                     onChange={handleSelectAll}
-                    className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                    className="rounded border-gray-300 text-olive-600 focus:ring-olive-500"
                   />
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -335,7 +335,7 @@ export default function UsersScreen() {
                       type="checkbox"
                       checked={selectedUsers.includes(user.id)}
                       onChange={() => handleSelectUser(user.id)}
-                      className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                      className="rounded border-gray-300 text-olive-600 focus:ring-olive-500"
                     />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
@@ -376,7 +376,7 @@ export default function UsersScreen() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handleUserAction(user.id, 'view')}
-                        className="text-emerald-600 hover:text-emerald-900"
+                        className="text-olive-600 hover:text-olive-900"
                         title="View Details"
                       >
                         <EyeIcon className="h-4 w-4" />
@@ -424,7 +424,7 @@ export default function UsersScreen() {
           <button className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50">
             Previous
           </button>
-          <button className="px-3 py-1 text-sm bg-emerald-600 text-white rounded">
+          <button className="px-3 py-1 text-sm bg-olive-600 text-white rounded">
             1
           </button>
           <button className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50">

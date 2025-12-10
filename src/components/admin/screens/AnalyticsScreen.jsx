@@ -153,7 +153,7 @@ export default function AnalyticsScreen() {
           <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-olive-500 focus:border-olive-500"
           >
             <option value="7d">Last 7 days</option>
             <option value="30d">Last 30 days</option>
@@ -162,7 +162,7 @@ export default function AnalyticsScreen() {
           </select>
           <button
             onClick={fetchAnalyticsData}
-            className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-olive-600 text-white rounded-lg hover:bg-olive-700 transition-colors flex items-center gap-2"
           >
             <ArrowDownTrayIcon className="h-4 w-4" />
             Export Report
@@ -178,13 +178,13 @@ export default function AnalyticsScreen() {
               <p className="text-sm font-medium text-gray-600">Total Revenue</p>
               <p className="text-2xl font-bold text-gray-900">{formatCurrency(analyticsData.overview.totalRevenue)}</p>
             </div>
-            <div className="p-3 bg-emerald-100 rounded-lg">
-              <CurrencyDollarIcon className="h-6 w-6 text-emerald-600" />
+            <div className="p-3 bg-olive-100 rounded-lg">
+              <CurrencyDollarIcon className="h-6 w-6 text-olive-600" />
             </div>
           </div>
           <div className="mt-4 flex items-center">
-            <ArrowTrendingUpIcon className="h-4 w-4 text-emerald-500 mr-1" />
-            <span className="text-sm text-emerald-600 font-medium">
+            <ArrowTrendingUpIcon className="h-4 w-4 text-olive-500 mr-1" />
+            <span className="text-sm text-olive-600 font-medium">
               {formatPercentage(analyticsData.overview.revenueGrowth)}
             </span>
             <span className="text-sm text-gray-500 ml-2">vs last period</span>
@@ -202,8 +202,8 @@ export default function AnalyticsScreen() {
             </div>
           </div>
           <div className="mt-4 flex items-center">
-            <ArrowTrendingUpIcon className="h-4 w-4 text-emerald-500 mr-1" />
-            <span className="text-sm text-emerald-600 font-medium">
+            <ArrowTrendingUpIcon className="h-4 w-4 text-olive-500 mr-1" />
+            <span className="text-sm text-olive-600 font-medium">
               {formatPercentage(analyticsData.overview.ordersGrowth)}
             </span>
             <span className="text-sm text-gray-500 ml-2">vs last period</span>
@@ -221,8 +221,8 @@ export default function AnalyticsScreen() {
             </div>
           </div>
           <div className="mt-4 flex items-center">
-            <ArrowTrendingUpIcon className="h-4 w-4 text-emerald-500 mr-1" />
-            <span className="text-sm text-emerald-600 font-medium">
+            <ArrowTrendingUpIcon className="h-4 w-4 text-olive-500 mr-1" />
+            <span className="text-sm text-olive-600 font-medium">
               {formatPercentage(analyticsData.overview.usersGrowth)}
             </span>
             <span className="text-sm text-gray-500 ml-2">vs last period</span>
@@ -240,8 +240,8 @@ export default function AnalyticsScreen() {
             </div>
           </div>
           <div className="mt-4 flex items-center">
-            <ArrowTrendingUpIcon className="h-4 w-4 text-emerald-500 mr-1" />
-            <span className="text-sm text-emerald-600 font-medium">
+            <ArrowTrendingUpIcon className="h-4 w-4 text-olive-500 mr-1" />
+            <span className="text-sm text-olive-600 font-medium">
               {formatPercentage(analyticsData.overview.productsGrowth)}
             </span>
             <span className="text-sm text-gray-500 ml-2">vs last period</span>
@@ -258,7 +258,7 @@ export default function AnalyticsScreen() {
             {analyticsData.revenue.map((item, index) => (
               <div key={index} className="flex flex-col items-center flex-1">
                 <div 
-                  className="w-full bg-emerald-500 rounded-t"
+                  className="w-full bg-olive-500 rounded-t"
                   style={{ height: `${(item.revenue / 35000) * 200}px` }}
                     ></div>
                 <span className="text-xs text-gray-500 mt-2">{item.month}</span>
@@ -336,7 +336,7 @@ export default function AnalyticsScreen() {
               <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                   <div className={`w-3 h-3 rounded-full ${
-                    order.status === 'Completed' ? 'bg-emerald-500' :
+                    order.status === 'Completed' ? 'bg-olive-500' :
                     order.status === 'Processing' ? 'bg-blue-500' :
                     order.status === 'Pending' ? 'bg-yellow-500' : 'bg-red-500'
                   }`}></div>
@@ -363,7 +363,7 @@ export default function AnalyticsScreen() {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div 
-                    className="bg-emerald-500 h-2 rounded-full"
+                    className="bg-olive-500 h-2 rounded-full"
                     style={{ width: `${source.rate}%` }}
                   ></div>
                 </div>

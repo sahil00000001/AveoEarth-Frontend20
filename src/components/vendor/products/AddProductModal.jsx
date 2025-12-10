@@ -806,7 +806,7 @@ export default function AddProductModal({ isOpen, onClose, onProductAdded }) {
                 {verificationState.result && (
                   <div className={`p-3 rounded-md border ${
                     verificationState.result.probability >= 0.7 
-                      ? 'bg-green-100 border-green-300' 
+                      ? 'bg-olive-100 border-olive-300' 
                       : 'bg-red-100 border-red-300'
                   }`}>
                     <div className="flex items-center justify-between mb-2">
