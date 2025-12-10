@@ -139,3 +139,42 @@ The website uses a cohesive earthy color palette representing sustainability and
   - Applied same sustainability earth-tone theme
   - Consistent styling with Hot Deals carousel
   - Smooth hover animations and 3D card effects
+- **Artisan Ticker Enhancement**:
+  - Created `ArtisanTicker` component with self-contained animated SVG scenes
+  - Uses `react-fast-marquee` for smooth infinite scrolling
+  - Features 6 animated artisan scenes showing actual work movements:
+    - Potter Shaping Clay (hands molding pottery on spinning wheel)
+    - Blacksmith Hammering (hammer striking glowing metal on anvil)
+    - Weaver at Loom (shuttle moving through warp threads)
+    - Tailor Stitching (needle and thread on fabric)
+    - Carpenter Sawing (hand plane with wood shavings)
+    - Farmer Harvesting (plants swaying in organic field)
+  - Pure SVG/CSS animations - no external dependencies or failing URLs
+  - Accessibility features: pause on hover/focus, reduced motion support
+  - Dynamic import with SSR disabled for proper hydration
+
+## Artisan Ticker Component
+
+### Location
+`src/components/layout/ArtisanTicker.jsx`
+
+### Libraries Used
+- **react-fast-marquee**: Smooth, performant marquee scrolling with gradient edges
+
+### Implementation
+Self-contained SVG components with native SVG `<animate>` and `<animateTransform>` elements for reliable animations without external dependencies.
+
+### Features
+- Animated SVG scenes showing artisans performing traditional crafts
+- Smooth horizontal scrolling marquee effect
+- Pause on hover/focus for accessibility
+- Reduced motion preference support (respects OS settings)
+- Gradient edges for seamless appearance
+- "Paused" indicator when hovering
+- Labels below each artisan scene
+
+### Customization
+To add more artisan scenes, create a new SVG component and add to the `artisanScenes` array:
+- `id`: Unique identifier
+- `Component`: React component returning animated SVG
+- `name`: Tooltip text (e.g., "Potter Shaping Clay")

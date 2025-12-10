@@ -9,6 +9,7 @@ import { auth, tokens } from "../../lib/api";
 import UserProfilePopup from "../ui/UserProfilePopup";
 import MiniCart from "../cart/MiniCart";
 import { useCart } from "../../hooks/useCart";
+import ArtisanTicker from "./ArtisanTicker";
 
 const SearchIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -237,24 +238,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full fixed top-0 left-0 z-50">
-      {!isVendorDashboard && (
-        <div className="bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-600 text-white h-7 flex items-center overflow-hidden relative">
-          <motion.div 
-            className="flex items-center whitespace-nowrap text-xs"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          >
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">★</span> 2,847 trees planted this month</span>
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">◎</span> 15.2T CO₂ offset</span>
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">♻</span> 500K+ plastic items saved</span>
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">🌱</span> Free shipping on orders above ₹999</span>
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">★</span> 2,847 trees planted this month</span>
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">◎</span> 15.2T CO₂ offset</span>
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">♻</span> 500K+ plastic items saved</span>
-            <span className="inline-flex items-center gap-1.5 px-6"><span className="text-emerald-300">🌱</span> Free shipping on orders above ₹999</span>
-          </motion.div>
-        </div>
-      )}
+      {!isVendorDashboard && <ArtisanTicker />}
 
       <div className="bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
