@@ -10,11 +10,13 @@ import { auth, tokens } from "../../lib/api";
 import UserProfilePopup from "../ui/UserProfilePopup";
 import MiniCart from "../cart/MiniCart";
 import { useCart } from "../../hooks/useCart";
+import { useChatBot } from "../../context/ChatBotContext";
+import RotatingEarthIcon from "../ai/RotatingEarthIcon";
 
 const ArtisanTicker = dynamic(() => import("./ArtisanTicker"), { 
   ssr: false,
   loading: () => (
-    <div className="flex items-center justify-center w-full h-[160px] bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 border-b border-stone-200">
+    <div className="flex items-center justify-center w-full h-[80px] bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 border-b border-stone-200">
       <span className="text-stone-600 text-xs">Loading artisan scenes...</span>
     </div>
   )
@@ -187,11 +189,14 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showTicker, setShowTicker] = useState(true);
   const { cart } = useCart();
+  const { isMinimized, restoreFromNavbar, isAnimating } = useChatBot();
   const pathname = usePathname();
   const router = useRouter();
   
   const isVendorDashboard = pathname?.startsWith('/vendor');
+  const isHomePage = pathname === '/';
 
   const navItems = [
     { href: "/category", label: "Categories" },
@@ -245,9 +250,25 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isHomePage) {
+      setShowTicker(false);
+      return;
+    }
+    
+    const handleScroll = () => {
+      const heroHeight = window.innerHeight * 0.85;
+      setShowTicker(window.scrollY < heroHeight - 100);
+    };
+    
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHomePage]);
+
   return (
     <div className="w-full fixed top-0 left-0 z-50">
-      {!isVendorDashboard && <ArtisanTicker />}
+      {!isVendorDashboard && showTicker && <ArtisanTicker />}
 
       <div className="bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
@@ -330,6 +351,34 @@ export default function Navbar() {
                 )}
               </>
             )}
+
+            <AnimatePresence>
+              {isMinimized && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0, x: 100, y: 100, rotateY: -720 }}
+                  animate={{ opacity: 1, scale: 1, x: 0, y: 0, rotateY: 0 }}
+                  exit={{ opacity: 0, scale: 0.5, y: 50 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    ease: [0.4, 0, 0.2, 1],
+                    rotateY: { duration: 0.8 }
+                  }}
+                  className="relative"
+                  style={{ perspective: '1000px' }}
+                >
+                  <RotatingEarthIcon 
+                    size={32} 
+                    onClick={restoreFromNavbar}
+                    className="hover:scale-110 transition-transform"
+                  />
+                  <motion.div
+                    className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full"
+                    animate={{ scale: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {!isVendorDashboard && (
               <motion.button

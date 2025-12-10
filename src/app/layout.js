@@ -7,6 +7,7 @@ import { Reem_Kufi, Poppins } from "next/font/google";
 import { AuthProvider } from "../hooks/useAuth";
 import { CartProvider } from "../hooks/useCart";
 import { OrdersProvider } from "../hooks/useOrders";
+import { ChatBotProvider } from "../context/ChatBotContext";
 import FloatingChatBot from "../components/ai/FloatingChatBot";
 
 const geistSans = Geist({
@@ -63,13 +64,15 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <CartProvider>
             <OrdersProvider>
-              <Navbar />
-              <main className="min-h-screen pb-[88px]">
-                {children}
-              </main>
-              <BottomNavigation />
-              <Footer />
-              <FloatingChatBot />
+              <ChatBotProvider>
+                <Navbar />
+                <main className="min-h-screen pb-[88px]">
+                  {children}
+                </main>
+                <BottomNavigation />
+                <Footer />
+                <FloatingChatBot />
+              </ChatBotProvider>
             </OrdersProvider>
           </CartProvider>
         </AuthProvider>

@@ -694,7 +694,7 @@ export default function HomePage() {
 
 
       {/* Product Recommendations - Showcasing Featured Eco Products */}
-      <div className="container mx-auto px-4 py-6 sm:py-10 space-y-6 sm:space-y-8">
+      <div className="container mx-auto px-4 pt-6 sm:pt-10 pb-0 space-y-6 sm:space-y-8">
         <ProductRecommendations 
           type="trending" 
           limit={8}

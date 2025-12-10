@@ -16,30 +16,30 @@ const artisanScenes = [
 
 const ArtisanCard = ({ scene }) => (
   <div 
-    className="flex flex-col items-center justify-center mx-4"
+    className="flex flex-col items-center justify-center mx-3"
     title={scene.name}
     aria-label={scene.name}
   >
-    <div className="w-[120px] h-[120px] rounded-lg overflow-hidden bg-white shadow-md border border-stone-200">
+    <div className="w-[60px] h-[60px] rounded-md overflow-hidden bg-white shadow-sm border border-stone-200">
       <Image
         src={scene.image}
         alt={`${scene.name} - traditional artisan sketch`}
-        width={120}
-        height={120}
+        width={60}
+        height={60}
         className="w-full h-full object-cover"
         priority={false}
         unoptimized
       />
     </div>
-    <span className="mt-2 text-xs font-medium text-stone-700 tracking-wide">
+    <span className="mt-1 text-[10px] font-medium text-stone-700 tracking-wide">
       {scene.name}
     </span>
   </div>
 );
 
 const Divider = () => (
-  <div className="flex items-center justify-center px-3 h-full">
-    <div className="w-px h-24 bg-gradient-to-b from-transparent via-stone-300 to-transparent rounded-full" />
+  <div className="flex items-center justify-center px-2 h-full">
+    <div className="w-px h-12 bg-gradient-to-b from-transparent via-stone-300 to-transparent rounded-full" />
   </div>
 );
 
@@ -65,7 +65,7 @@ export default function ArtisanTicker() {
 
   return (
     <div 
-      className="bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 py-3 flex items-center overflow-hidden relative border-b border-stone-200"
+      className="bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 py-1.5 flex items-center overflow-hidden relative border-b border-stone-200"
       role="region"
       aria-label="Traditional artisan crafts showcase - hover to pause"
       tabIndex={0}
@@ -84,7 +84,7 @@ export default function ArtisanTicker() {
         className="overflow-hidden"
         play={!prefersReducedMotion}
       >
-        <div className="flex items-center py-2 px-4">
+        <div className="flex items-center py-1 px-3">
           {sceneElements}
           <Divider />
           {sceneElements}
