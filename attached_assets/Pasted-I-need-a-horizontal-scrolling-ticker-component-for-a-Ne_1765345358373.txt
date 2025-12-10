@@ -1,0 +1,53 @@
+I need a horizontal scrolling ticker component for a Next.js website. The ticker is positioned above the navigation bar and scrolls content continuously from right to left.
+What To Display:
+A series of static sketch illustrations of artisans working. Each sketch shows a real human figure engaged in traditional craft work. These are NOT icons. These are NOT emojis. These are detailed hand-drawn style sketches showing actual people doing actual work.
+Specific Sketches Required:
+
+A potter sitting at a pottery wheel, hands shaping wet clay
+A weaver sitting at a wooden handloom, passing shuttle through threads
+A blacksmith standing at an anvil, hammer raised mid-strike
+A carpenter bent over wood, using a hand plane or chisel
+A woman sitting with a charkha (spinning wheel), spinning cotton thread
+A basket weaver sitting cross-legged, weaving reeds with hands
+A tailor sitting with fabric, needle and thread in hand stitching
+
+Each sketch must show the full figure or upper body of the person, their tool, and their material. Real human proportions. Real working postures.
+Image Style:
+
+Monochrome line-art or pencil sketch aesthetic
+Documentary illustration style, like from a heritage craft book
+Earthy, muted tones if using color (browns, ochres, charcoal)
+Clean white or transparent background
+NOT cartoon, NOT playful, NOT childish, NOT bouncy
+
+Image Format:
+
+Use SVG format for crisp scaling
+If SVG not possible, use optimized PNG or WebP with transparent background
+Each sketch should be approximately 120-150px height to fit ticker
+
+Libraries To Use:
+
+react-fast-marquee for the horizontal scrolling ticker
+Standard Next.js Image component for optimized loading
+Tailwind CSS for styling
+
+Component Requirements:
+
+Smooth continuous scroll from right to left
+Pause on hover
+Seamless loop with no visible gap
+Small text label below each sketch with the craft name (e.g., "Potter", "Weaver", "Blacksmith")
+Responsive height adjustment
+
+Do NOT:
+
+Use emoji or unicode symbols
+Use cartoon illustrations
+Use colorful playful graphics
+Use Lottie animations
+Use icon libraries like Lucide or FontAwesome
+Generate bouncy or cute visuals
+
+Image Source Approach:
+Either generate realistic sketch-style illustrations using AI image generation, or use placeholder sketch images from Unsplash/Pexels filtered for "artisan sketch" or "craft illustration". The visual must look like it belongs in a documentary or heritage publication.

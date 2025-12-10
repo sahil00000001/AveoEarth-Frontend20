@@ -5,11 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import dynamic from "next/dynamic";
 import { auth, tokens } from "../../lib/api";
 import UserProfilePopup from "../ui/UserProfilePopup";
 import MiniCart from "../cart/MiniCart";
 import { useCart } from "../../hooks/useCart";
-import ArtisanTicker from "./ArtisanTicker";
+
+const ArtisanTicker = dynamic(() => import("./ArtisanTicker"), { 
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-[160px] bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 border-b border-stone-200">
+      <span className="text-stone-600 text-xs">Loading artisan scenes...</span>
+    </div>
+  )
+});
 
 const SearchIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

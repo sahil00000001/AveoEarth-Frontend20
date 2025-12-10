@@ -139,17 +139,19 @@ The website uses a cohesive earthy color palette representing sustainability and
   - Applied same sustainability earth-tone theme
   - Consistent styling with Hot Deals carousel
   - Smooth hover animations and 3D card effects
-- **Artisan Ticker Enhancement**:
-  - Created `ArtisanTicker` component with self-contained animated SVG scenes
+- **Artisan Ticker Redesign with Realistic Sketches**:
+  - Replaced SVG animations with realistic AI-generated artisan sketch illustrations
   - Uses `react-fast-marquee` for smooth infinite scrolling
-  - Features 6 animated artisan scenes showing actual work movements:
-    - Potter Shaping Clay (hands molding pottery on spinning wheel)
-    - Blacksmith Hammering (hammer striking glowing metal on anvil)
-    - Weaver at Loom (shuttle moving through warp threads)
-    - Tailor Stitching (needle and thread on fabric)
-    - Carpenter Sawing (hand plane with wood shavings)
-    - Farmer Harvesting (plants swaying in organic field)
-  - Pure SVG/CSS animations - no external dependencies or failing URLs
+  - Features 7 documentary-style pencil sketch illustrations showing traditional craftspeople:
+    - Potter sitting at pottery wheel, shaping wet clay
+    - Weaver at wooden handloom, passing shuttle through threads
+    - Blacksmith at anvil, hammer raised mid-strike
+    - Carpenter using hand plane on wood
+    - Woman with charkha (spinning wheel), spinning cotton thread
+    - Basket weaver sitting cross-legged, weaving reeds
+    - Tailor stitching fabric with needle and thread
+  - Monochrome line-art aesthetic with earthy sepia tones
+  - Images stored in `public/artisan-sketches/` folder
   - Accessibility features: pause on hover/focus, reduced motion support
   - Dynamic import with SSR disabled for proper hydration
 
@@ -158,23 +160,35 @@ The website uses a cohesive earthy color palette representing sustainability and
 ### Location
 `src/components/layout/ArtisanTicker.jsx`
 
+### Assets Location
+`public/artisan-sketches/` - Contains 7 AI-generated sketch illustrations
+
 ### Libraries Used
 - **react-fast-marquee**: Smooth, performant marquee scrolling with gradient edges
+- **next/image**: Optimized image loading
 
 ### Implementation
-Self-contained SVG components with native SVG `<animate>` and `<animateTransform>` elements for reliable animations without external dependencies.
+Displays realistic pencil-sketch style illustrations of traditional artisans in a smooth horizontal scrolling ticker. Loaded via dynamic import with SSR disabled to prevent hydration issues.
+
+### Visual Style
+- Documentary heritage illustration aesthetic
+- Monochrome line-art with earthy sepia tones
+- Amber/stone gradient background (#fef3c7, stone-100)
+- 120x120px rounded image cards with subtle shadows
+- Craft name labels below each illustration
 
 ### Features
-- Animated SVG scenes showing artisans performing traditional crafts
+- 7 realistic artisan sketch illustrations
 - Smooth horizontal scrolling marquee effect
 - Pause on hover/focus for accessibility
 - Reduced motion preference support (respects OS settings)
 - Gradient edges for seamless appearance
 - "Paused" indicator when hovering
-- Labels below each artisan scene
+- Craft name labels below each artisan
 
 ### Customization
-To add more artisan scenes, create a new SVG component and add to the `artisanScenes` array:
+To add more artisan scenes, add the image to `public/artisan-sketches/` and update the `artisanScenes` array in ArtisanTicker.jsx:
 - `id`: Unique identifier
-- `Component`: React component returning animated SVG
+- `name`: Craft name displayed as label
+- `image`: Path to image in public folder
 - `name`: Tooltip text (e.g., "Potter Shaping Clay")
