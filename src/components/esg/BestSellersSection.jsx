@@ -223,8 +223,8 @@ export default function BestSellersSection() {
             <span className="text-[#8b7355] font-semibold text-sm uppercase tracking-wider">Customer Favorites</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
-            Best <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8b7355] via-[#6b8e23] to-[#4682b4]">Sellers</span>
+          <h2 className="font-reem font-bold text-3xl sm:text-4xl lg:text-5xl leading-[1.2] mb-4">
+            <span className="text-[#52494a]">Best</span> <span className="text-[#6b8e23]">Sellers</span>
           </h2>
           
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">

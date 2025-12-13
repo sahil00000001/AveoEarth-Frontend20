@@ -19,25 +19,25 @@ const ArtisanCard = ({ scene }) => {
 
   return (
     <div 
-      className="flex flex-col items-center justify-center mx-3"
+      className="flex flex-col items-center justify-center mx-2"
       title={scene.name}
       aria-label={scene.name}
     >
-      <div className="w-[60px] h-[60px] rounded-md overflow-hidden bg-white shadow-sm border border-stone-200 relative">
+      <div className="w-[36px] h-[36px] rounded-md overflow-hidden bg-white shadow-sm border border-stone-200 relative">
         {!isLoaded && (
           <div className="absolute inset-0 bg-stone-200/70 animate-pulse" />
         )}
         <Image
           src={scene.image}
           alt={`${scene.name} - traditional artisan sketch`}
-          width={60}
-          height={60}
+          width={36}
+          height={36}
           className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           priority
           onLoad={() => setIsLoaded(true)}
         />
       </div>
-      <span className="mt-1 text-[10px] font-medium text-stone-700 tracking-wide">
+      <span className="mt-0.5 text-[7px] font-medium text-stone-700 tracking-wide">
         {scene.name}
       </span>
     </div>
@@ -45,8 +45,8 @@ const ArtisanCard = ({ scene }) => {
 };
 
 const Divider = () => (
-  <div className="flex items-center justify-center px-2 h-full">
-    <div className="w-px h-12 bg-gradient-to-b from-transparent via-stone-300 to-transparent rounded-full" />
+  <div className="flex items-center justify-center px-1.5 h-full">
+    <div className="w-px h-8 bg-gradient-to-b from-transparent via-stone-300 to-transparent rounded-full" />
   </div>
 );
 
@@ -63,16 +63,9 @@ export default function ArtisanTicker() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const sceneElements = artisanScenes.flatMap((scene, index) => {
-    return [
-      <ArtisanCard key={scene.id} scene={scene} />,
-      index < artisanScenes.length - 1 && <Divider key={`div-${index}`} />
-    ];
-  }).filter(Boolean);
-
   return (
     <div 
-      className="bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 py-1.5 flex items-center overflow-hidden relative border-b border-stone-200"
+      className="bg-gradient-to-r from-amber-50 via-stone-100 to-amber-50 py-1 flex items-center overflow-hidden relative border-b border-stone-200"
       role="region"
       aria-label="Traditional artisan crafts showcase - hover to pause"
       tabIndex={0}
@@ -87,15 +80,17 @@ export default function ArtisanTicker() {
         pauseOnClick={true}
         gradient={true}
         gradientColor="#fef3c7"
-        gradientWidth={60}
+        gradientWidth={40}
         className="overflow-hidden"
         play={!prefersReducedMotion}
+        autoFill={true}
       >
-        <div className="flex items-center py-1 px-3">
-          {sceneElements}
-          <Divider />
-          {sceneElements}
-        </div>
+        {artisanScenes.map((scene, index) => (
+          <div key={scene.id} className="flex items-center">
+            <ArtisanCard scene={scene} />
+            <Divider />
+          </div>
+        ))}
       </Marquee>
 
       {isPaused && (

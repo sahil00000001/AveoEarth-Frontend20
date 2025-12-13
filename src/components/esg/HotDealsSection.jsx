@@ -292,8 +292,8 @@ export default function HotDealsSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
           <div className="text-center sm:text-left">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900">
-              Hot <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6b8e23] via-[#8b7355] to-[#4682b4]">Deals</span>
+            <h2 className="font-reem font-bold text-3xl sm:text-4xl lg:text-5xl leading-[1.2]">
+              <span className="text-[#52494a]">Hot</span> <span className="text-[#6b8e23]">Deals</span>
             </h2>
           </div>
 
@@ -342,10 +342,6 @@ export default function HotDealsSection() {
             )}
             </div>
 
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#6b8e23]/20 to-[#8b7355]/20 px-4 py-2 rounded-full">
-              <span className="text-xl">🔥</span>
-              <span className="text-[#556b2f] font-semibold text-sm uppercase tracking-wider">Limited Time</span>
-            </div>
           </div>
         </div>
 

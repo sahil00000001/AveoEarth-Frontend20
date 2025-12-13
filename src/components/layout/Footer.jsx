@@ -114,6 +114,9 @@ export default function Footer() {
               <a href="/reviews/write" className="font-poppins text-olive-100 text-[12px] leading-[1.5] hover:text-olive-300 transition-colors cursor-pointer">
                 Write a Review
               </a>
+              <a href="/subscription" className="font-poppins text-olive-100 text-[12px] leading-[1.5] hover:text-olive-300 transition-colors cursor-pointer">
+                Subscription Plans
+              </a>
             </div>
           </div>
         </div>
