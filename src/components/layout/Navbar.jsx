@@ -314,7 +314,7 @@ export default function Navbar() {
                 className={`hidden md:flex items-center transition-all duration-300 ${isSearchFocused ? 'w-56' : 'w-44'}`}
                 animate={{ width: isSearchFocused ? 224 : 176 }}
               >
-                <div className={`flex items-center w-full bg-gray-50 rounded-full px-3 py-1.5 border transition-all duration-200 ${isSearchFocused ? 'border-olive-300 shadow-sm' : 'border-transparent'}`}>
+                <div className={`flex items-center w-full bg-white rounded-full px-3 py-1.5 border shadow-sm transition-all duration-200 ${isSearchFocused ? 'border-olive-400 shadow-md' : 'border-gray-200 shadow-sm'}`}>
                   <SearchIcon />
                   <input
                     type="text"
@@ -410,7 +410,7 @@ export default function Navbar() {
           >
             <div className="px-4 py-3 space-y-1">
               <form onSubmit={handleSearchSubmit} className="mb-3">
-                <div className="flex items-center bg-gray-50 rounded-full px-3 py-2 border border-gray-200">
+                <div className="flex items-center bg-white rounded-full px-3 py-2 border border-gray-200 shadow-sm">
                   <SearchIcon />
                   <input
                     type="text"

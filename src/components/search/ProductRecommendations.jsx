@@ -44,7 +44,8 @@ export default function ProductRecommendations({
       review_count: 156,
       primary_image: "/products/bamboo_toothbrush_set.png",
       category_name: "Personal Care",
-      images: ["/products/bamboo_toothbrush_set.png"]
+      images: ["/products/bamboo_toothbrush_set.png"],
+      ecoScore: 96
     },
     {
       id: 2,
@@ -57,7 +58,8 @@ export default function ProductRecommendations({
       review_count: 89,
       primary_image: "/products/organic_cotton_tote_bag.png",
       category_name: "Fashion",
-      images: ["/products/organic_cotton_tote_bag.png"]
+      images: ["/products/organic_cotton_tote_bag.png"],
+      ecoScore: 94
     },
     {
       id: 3,
@@ -70,7 +72,8 @@ export default function ProductRecommendations({
       review_count: 234,
       primary_image: "/products/stainless_steel_tumbler.png",
       category_name: "Drinkware",
-      images: ["/products/stainless_steel_tumbler.png"]
+      images: ["/products/stainless_steel_tumbler.png"],
+      ecoScore: 97
     },
     {
       id: 4,
@@ -83,7 +86,8 @@ export default function ProductRecommendations({
       review_count: 67,
       primary_image: "/products/recycled_paper_notebook.png",
       category_name: "Stationery",
-      images: ["/products/recycled_paper_notebook.png"]
+      images: ["/products/recycled_paper_notebook.png"],
+      ecoScore: 98
     },
     {
       id: 5,
@@ -96,7 +100,8 @@ export default function ProductRecommendations({
       review_count: 123,
       primary_image: "/products/solar_power_bank.png",
       category_name: "Tech",
-      images: ["/products/solar_power_bank.png"]
+      images: ["/products/solar_power_bank.png"],
+      ecoScore: 95
     },
     {
       id: 6,
@@ -109,7 +114,8 @@ export default function ProductRecommendations({
       review_count: 198,
       primary_image: "/products/hemp_fiber_yoga_mat.png",
       category_name: "Fitness",
-      images: ["/products/hemp_fiber_yoga_mat.png"]
+      images: ["/products/hemp_fiber_yoga_mat.png"],
+      ecoScore: 93
     },
     {
       id: 7,
@@ -122,7 +128,8 @@ export default function ProductRecommendations({
       review_count: 145,
       primary_image: "/products/wooden_kitchen_utensils.png",
       category_name: "Kitchen",
-      images: ["/products/wooden_kitchen_utensils.png"]
+      images: ["/products/wooden_kitchen_utensils.png"],
+      ecoScore: 92
     },
     {
       id: 8,
@@ -135,7 +142,8 @@ export default function ProductRecommendations({
       review_count: 267,
       primary_image: "/products/organic_skincare_set.png",
       category_name: "Beauty",
-      images: ["/products/organic_skincare_set.png"]
+      images: ["/products/organic_skincare_set.png"],
+      ecoScore: 96
     }
   ];
 
@@ -263,6 +271,7 @@ export default function ProductRecommendations({
                 originalPrice={product.compare_at_price || product.price + 10}
                 rating={product.rating || 4.5}
                 reviews={product.review_count || 100}
+                ecoScore={product.ecoScore || 90}
                 className="w-full"
               />
             </div>

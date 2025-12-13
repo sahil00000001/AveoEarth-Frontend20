@@ -273,7 +273,7 @@ export default function BestSellersSection() {
                         src={product.imageUrl}
                         alt={product.title}
                         fill
-                        className="object-contain p-4 sm:p-6 transition-transform duration-500 hover:scale-110"
+                        className="object-cover transition-transform duration-500 hover:scale-110"
                         sizes="(max-width: 640px) 50vw, 25vw"
                       />
                       {hoveredCard === product.id && (

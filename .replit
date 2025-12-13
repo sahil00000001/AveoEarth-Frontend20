@@ -33,46 +33,6 @@ outputType = "webview"
 localPort = 5000
 externalPort = 80
 
-[[ports]]
-localPort = 33849
-externalPort = 3000
-
-[[ports]]
-localPort = 33869
-externalPort = 4200
-
-[[ports]]
-localPort = 33957
-externalPort = 3002
-
-[[ports]]
-localPort = 34877
-externalPort = 3003
-
-[[ports]]
-localPort = 34963
-externalPort = 3001
-
-[[ports]]
-localPort = 36017
-externalPort = 8000
-
-[[ports]]
-localPort = 37097
-externalPort = 6800
-
-[[ports]]
-localPort = 37845
-externalPort = 6000
-
-[[ports]]
-localPort = 41013
-externalPort = 5000
-
-[[ports]]
-localPort = 46579
-externalPort = 5173
-
 [deployment]
 deploymentTarget = "autoscale"
 run = ["npm", "start"]

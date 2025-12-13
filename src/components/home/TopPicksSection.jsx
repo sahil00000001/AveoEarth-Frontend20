@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-mo
 import Image from "next/image";
 import Link from "next/link";
 import { ShoppingCart, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import EcoScoreCircle from "../ui/EcoScoreCircle";
 
 const topPicksProducts = [
   {
@@ -165,52 +166,6 @@ const topPicksProducts = [
   }
 ];
 
-function EcoScoreBadge({ score, delay = 0, compact = false }) {
-  const getScoreColor = (score) => {
-    if (score >= 95) return { bg: "from-olive-400 to-olive-600", glow: "rgba(107, 142, 35, 0.6)" };
-    if (score >= 90) return { bg: "from-olive-400 to-olive-500", glow: "rgba(85, 107, 47, 0.5)" };
-    if (score >= 85) return { bg: "from-olive-300 to-olive-500", glow: "rgba(143, 188, 90, 0.5)" };
-    return { bg: "from-soil-400 to-olive-500", glow: "rgba(139, 115, 85, 0.5)" };
-  };
-
-  const colors = getScoreColor(score);
-  const size = compact ? "w-8 h-8" : "w-14 h-14";
-
-  return (
-    <motion.div
-      initial={{ scale: 1, y: 0 }}
-      animate={{ scale: 1, y: 0 }}
-      transition={{ 
-        type: "spring", 
-        stiffness: 300, 
-        damping: 20
-      }}
-      className={`absolute ${compact ? "top-2 right-2" : "-top-6 left-1/2 -translate-x-1/2"} z-20`}
-    >
-      <motion.div
-        animate={{ 
-          boxShadow: [
-            `0 0 15px ${colors.glow}`,
-            `0 0 30px ${colors.glow}`,
-            `0 0 15px ${colors.glow}`
-          ]
-        }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className={`${size} rounded-full bg-gradient-to-br ${colors.bg} flex items-center justify-center shadow-xl border-3 border-white`}
-      >
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0 rounded-full border-2 border-dashed border-white/30"
-        />
-        <div className="text-center">
-          <span className={`text-white font-bold ${compact ? "text-xs" : "text-sm"} drop-shadow-lg`}>{score}</span>
-          <span className={`text-white/90 ${compact ? "text-[6px]" : "text-[8px]"} block -mt-0.5`}>ECO</span>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
 
 function ProductTile3D({ product, index, isActive, compact = false }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -243,8 +198,8 @@ function ProductTile3D({ product, index, isActive, compact = false }) {
     setIsHovered(false);
   };
 
-  const imageHeight = compact ? "h-24" : "h-48";
-  const padding = compact ? "p-2" : "p-4";
+  const imageHeight = compact ? "h-24 sm:h-28 md:h-32 lg:h-36" : "h-56";
+  const padding = compact ? "p-2 sm:p-3" : "p-4";
 
   return (
     <motion.div
@@ -268,7 +223,11 @@ function ProductTile3D({ product, index, isActive, compact = false }) {
       className="relative"
       style={{ perspective: 800 }}
     >
-      {!compact && <EcoScoreBadge score={product.ecoScore} delay={index * 0.08 + 0.2} compact={compact} />}
+      {!compact && (
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
+          <EcoScoreCircle score={product.ecoScore} size="large" />
+        </div>
+      )}
       
       <motion.div
         style={{ 
@@ -301,18 +260,14 @@ function ProductTile3D({ product, index, isActive, compact = false }) {
               fill
               priority
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              className="object-contain p-2"
+              className="object-cover"
               onLoad={() => setImageLoaded(true)}
             />
           </motion.div>
           
           {compact && (
             <div className="absolute top-1.5 right-1.5 z-20">
-              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-olive-400 to-olive-500 flex items-center justify-center shadow-md border-2 border-white">
-                <div className="text-center">
-                  <span className="text-white font-bold text-[9px] leading-none">{product.ecoScore}</span>
-                </div>
-              </div>
+              <EcoScoreCircle score={product.ecoScore} size="small" />
             </div>
           )}
           
@@ -366,7 +321,7 @@ export default function TopPicksSection({ compact = false }) {
   const [currentSet, setCurrentSet] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isHoveringSection, setIsHoveringSection] = useState(false);
-  const itemsPerPage = compact ? 6 : 4;
+  const itemsPerPage = compact ? 8 : 4;
   const totalSets = Math.ceil(topPicksProducts.length / itemsPerPage);
 
   useEffect(() => {
@@ -397,7 +352,7 @@ export default function TopPicksSection({ compact = false }) {
   if (compact) {
     return (
       <div 
-        className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-white/50"
+        className="relative bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 shadow-xl border border-white/50"
         onMouseEnter={() => setIsHoveringSection(true)}
         onMouseLeave={() => setIsHoveringSection(false)}
       >
@@ -431,8 +386,8 @@ export default function TopPicksSection({ compact = false }) {
             <ChevronRight className="w-4 h-4 text-gray-600" />
           </button>
 
-          <div className="px-4">
-            <div className="grid grid-cols-3 gap-2">
+          <div className="px-1 sm:px-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3">
               {getCurrentProducts().map((product, index) => (
                 <ProductTile3D
                   key={`${currentSet}-${product.id}`}

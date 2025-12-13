@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useCart } from "../../hooks/useCart";
 import { useAuth } from "../../hooks/useAuth";
 import { Check, Minus, Plus } from "lucide-react";
+import EcoScoreCircle from "./EcoScoreCircle";
 
 // Star Rating Component
 function StarRating({ rating = 4.9, reviews = 524 }) {
@@ -105,7 +106,8 @@ export default function ProductCard({
   className = "", // Additional classes
   slug, // Product slug for navigation
   productId, // Product ID for navigation
-  inStock = true // Add inStock prop, default true
+  inStock = true, // Add inStock prop, default true
+  ecoScore = null // Eco score for the product
 }) {
   const router = useRouter();
   const { addToCart, updateCartItem } = useCart();
@@ -252,6 +254,11 @@ export default function ProductCard({
           className="object-cover transition-opacity duration-300"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
+        {ecoScore && (
+          <div className="absolute top-3 right-3 z-20">
+            <EcoScoreCircle score={ecoScore} size="default" />
+          </div>
+        )}
       </div>
 
       {/* Card Content - using flexbox to push price section to bottom */}

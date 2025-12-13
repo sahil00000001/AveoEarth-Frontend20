@@ -224,7 +224,7 @@ export default function HotDealsSection() {
 
   return (
     <section 
-      className="relative w-full py-8 sm:py-12 overflow-hidden"
+      className="relative w-full py-4 sm:py-6 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -290,19 +290,15 @@ export default function HotDealsSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
           <div className="text-center sm:text-left">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#6b8e23]/20 to-[#8b7355]/20 px-4 py-2 rounded-full mb-3">
-              <span className="text-xl">🔥</span>
-              <span className="text-[#556b2f] font-semibold text-sm uppercase tracking-wider">Limited Time</span>
-            </div>
-            
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900">
               Hot <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6b8e23] via-[#8b7355] to-[#4682b4]">Deals</span>
             </h2>
           </div>
 
-          <div className="relative" ref={dropdownRef}>
+          <div className="flex items-center gap-3">
+            <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="flex items-center gap-3 bg-white/90 backdrop-blur-sm px-5 py-3 rounded-xl shadow-lg border border-[#6b8e23]/20 hover:border-[#6b8e23]/40 transition-all duration-300 min-w-[200px]"
@@ -344,6 +340,12 @@ export default function HotDealsSection() {
                 ))}
               </div>
             )}
+            </div>
+
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#6b8e23]/20 to-[#8b7355]/20 px-4 py-2 rounded-full">
+              <span className="text-xl">🔥</span>
+              <span className="text-[#556b2f] font-semibold text-sm uppercase tracking-wider">Limited Time</span>
+            </div>
           </div>
         </div>
 
@@ -374,7 +376,7 @@ export default function HotDealsSection() {
                       src={product.imageUrl}
                       alt={product.title}
                       fill
-                      className="object-contain p-4 sm:p-6 transition-transform duration-500 hover:scale-110"
+                      className="object-cover transition-transform duration-500 hover:scale-110"
                       sizes="(max-width: 640px) 50vw, 25vw"
                     />
                     {hoveredCard === product.id && (

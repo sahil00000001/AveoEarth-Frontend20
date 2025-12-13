@@ -473,8 +473,8 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/40 to-transparent" />
         </div>
         
-        <div className="relative z-10 container mx-auto px-6 lg:px-10 pt-14 pb-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-10 pt-28 sm:pt-24 md:pt-24 lg:pt-20 xl:pt-16 pb-16">
+          <div className="grid grid-cols-1 xl:grid-cols-[40%_60%] gap-6 xl:gap-8 items-center">
             {/* Left Side - Hero Content */}
             <div className="space-y-6 slide-up text-center lg:text-left">
               <div className="space-y-4">
@@ -518,7 +518,7 @@ export default function HomePage() {
             </div>
             
             {/* Right Side - Top Picks */}
-            <div className="slide-up">
+            <div className="slide-up mt-6 xl:mt-0">
               <TopPicksSection compact={true} />
             </div>
           </div>
@@ -526,10 +526,10 @@ export default function HomePage() {
       </section>
 
       {/* Top Categories Section - Hover Bubbles with animations */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-8 sm:py-10 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">Explore Our <span className="text-olive-700">Categories</span></h2>
+          <div className="text-center mb-8">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-3">Explore Our <span className="text-olive-700">Categories</span></h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Curated collections for a sustainable lifestyle. Hover to see featured products.</p>
           </div>
           <style>{`@keyframes bubble-emerge{from{opacity:0;transform:scale(0.8) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}.bubble-emerge{animation:bubble-emerge 300ms cubic-bezier(0.175,0.885,0.32,1.275) forwards;opacity:0}`}</style>
